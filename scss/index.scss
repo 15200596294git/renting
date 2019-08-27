@@ -6,6 +6,8 @@ ul{
 a{
   text-decoration: none;
 }
+
+
 .good-ul{
   padding:30px 0;
   display: flex;
@@ -25,10 +27,11 @@ a{
 
 .hotcity{
   background:#f0f0f0;
-  margin:25px 0;
+  margin:25px 0 50px 0;
   text-align: center;
 }
 .hotcity-con{
+  width:1200px;
   margin:0 auto;
   padding:15px 0 0 0 ;
 }
@@ -36,10 +39,215 @@ a{
   margin:15px 0 15px 0;
   font-weight: 500;
   color:#353535;
+  font-size:29px;
 }
 .con-f1{
   display: inline-block;
   font-size:17px;
   padding:0px 0 57px 0;
   color:#888;
+}
+.hotcity-blo{
+  float: left;
+}
+.hotcity-main::after{
+  display:block;
+  content:"";
+  clear:both;
+}
+.hotcity-blo:first-child{
+  width:800px;
+}
+.hotcity-blo:nth-child(2){
+  width:400px;
+}
+.hotcity-blo:nth-child(3){
+  width:400px;
+}
+.hotcity-blo:nth-child(4){
+  width:800px;
+}
+.hotcity-blo:nth-child(5){
+  width:400px;
+}
+.hotcity-blo:nth-child(6){
+  width:400px;
+}
+.hotcity-blo:last-child{
+  width:400px;
+}
+.hotcity-main{
+  width:100%;
+  margin:0 auto;
+}
+.hotcity-main::after{
+  display:block;
+  content:"";
+  clear:both;
+}
+.hot-link{
+  display: block;
+  position: relative;
+  padding:10px;
+}
+.hot-link:hover{
+  background:#ffffff;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+}
+.hot-link>img{
+  height:280px;
+}
+.text-box{
+  width:100%;
+  position: absolute;
+  top:38%;
+  left:0;
+  color:#ffffff;
+}
+.text-box>div{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.text-f1{
+  font-size:26px;
+  margin-bottom: 5px;
+}
+/* 为什么在木鸟订房 */
+.ad-box{
+  width:100%;
+  background:url(../public/index/s_mn_ad_bg.jpg);
+  text-align: center;
+}
+.adbox-con{
+  width:1200px;
+  margin:0 auto;
+}
+.adbox-con-tit{
+  padding:15px 0;
+  font-weight: 500;
+}
+.adbox-con-tit>h2{
+  color:#fff;
+  font-size:28px;
+}
+/* 图标部分 */
+.adbox-con-box{
+  width:100%;
+  height:180px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+/* 图标基本样式 */
+.icon-posi{
+  display:inline-block;
+  width:105px;
+  height:104px;
+}
+.ad-con-icon{
+  background:url(../public/index/index_bz1.png) no-repeat;
+}
+
+.ad-con-div{
+  width:290px;
+  height:170px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding:10px 35px 0 35px;
+  cursor: pointer;
+  
+}
+.ad-con-div:hover{
+  
+  box-shadow: 0 0 5px #1877a6;
+}
+/*字体设置*/
+.icon-bottom{
+  font-weight: 500;
+  color:#fff;
+  font-size:17px;
+  margin:20px 0;
+}
+// 5.一种居所，一种情怀
+// 上外边距
+.features-box{
+  width:100%;
+  margin:0 auto;
+  padding: 20px 0;
+  background:#f0f0f0;
+}
+.features-con{
+  width:1200px;
+  margin:0 auto;
+}
+// 标题部分
+.features-tit{
+  margin:0 auto; 
+  padding:30px 0;
+  width:100%;
+  text-align:center;
+}
+// 字体样式
+.features-h2{
+  color:#353535;
+  font-size:28px;
+  font-weight:500;
+  
+}
+.features-span1,.features-span2{
+  display: block;
+  width:100%;
+}
+.features-span1{
+  color:#353535;
+  font-size:16px;
+  line-height: 45px;
+}
+.features-span2>a{
+  color:#888;
+  background:#ddd;
+  border-radius:15px;
+  text-align: center;
+  font-size:12px;
+  padding:6px 13px;
+}
+// 图片部分
+.features-pic{
+  width:100%;
+  height:900px;
+  margin:0 auto;
+}
+.pic-container{
+  float:left;
+  width:400px;
+  height:300px;
+}
+.pic-container>a{
+  display: block;
+  position: relative;
+}
+.pic-container>a>img{
+  padding:10px;
+  
+}
+.pic-container>a>img:hover{
+  background:#fff;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+.pic-font{
+  position: absolute;
+  top:214px;
+  left:20px;
+}
+.pic-font-h3{
+  color:#fff;
+  font-weight:500;
+  font-size:21px;
+}
+.pic-font-span{
+  color:#fff;
+  font-size:14px;
+  font-weight: 500;
 }
