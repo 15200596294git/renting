@@ -1,0 +1,67 @@
+/* 简单reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+  /* 脚部 */
+  #footer{
+    width:100%;
+    background:#333;
+    height:auto;
+  }
+  /* 微信微博部分 */
+  .social{
+    margin:0 auto;
+    width: 198px;
+    height: 109px;
+    padding-top:20px;
+  }
+  /* 背景图片基础样式 */
+  .icon-posi{
+    display: inline-block;
+    width:89px;
+    height:89px;
+    cursor: pointer;
+  }
+  /* 微信背景图片 */
+  .social-wx{
+    background:url(../public/footer/footer_weibo.png) no-repeat;
+  }
+  /* 微博背景图片 */
+  .social-sina{
+    background:url(../public/footer/weixin.png) no-repeat;
+    margin-left:15px;
+  }
+
+  /* 第二部分 链接列表 */
+  .link-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 140px;
+  }
+  /* 设置字体 */
+  .hot-rent{
+    color:#555;
+    font-size:14px;
+    font-weight: 500;
+  }
+  /* 链接列表 */
+  .link-list>a{
+    font-size:12px;
+    color:#555;
+  }
+  .link-list{
+    text-align: left;
+  }
+  /* 扩展 */
+  .extend{
+    color:#555;
+    font-size:14px;
+  }
