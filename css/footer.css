@@ -52,16 +52,77 @@ a {
     font-size:14px;
     font-weight: 500;
   }
+  /* ul样式 */
+  .link{
+    border-bottom: 1px solid #444;
+    padding:35px 0;
+  }
   /* 链接列表 */
   .link-list>a{
-    font-size:12px;
+    font-size:12px; 
     color:#555;
   }
   .link-list{
     text-align: left;
+    line-height: 24px;
   }
   /* 扩展 */
   .extend{
     color:#555;
     font-size:14px;
+  }
+  /* 第三部分 导航 */
+  .footer-nav{
+    width:1200px;
+    margin:0 auto;
+    padding:30px 0;
+  }
+  .footer-nav-div1{
+    text-align: center;
+  }
+  .footer-nav-div1>a{
+    color:#888;
+    font:12px "Microsoft YaHei";
+  }
+  .footer-nav-div1>a~a::before{
+    display: inline-block;
+    content:"|";
+    padding:0 10px;
+  }
+  /* 第二行样式 */
+  .footer-nav-div2{
+    text-align:center;
+    color:#888;
+    font:12px "Microsoft YaHei";
+    line-height: 24px;
+  }
+  .m10{
+    margin:0 10px;
+  }
+  /* 第三行样式 */
+  .footer-nav-div3{
+    text-align: center;
+    color:#888;
+    font:12px "Microsoft YaHei";
+    line-height: 24px;
+  }
+  .footer-nav-div3>a{
+    color:#888;
+    font:12px "Microsoft YaHei";
+  }
+  .footer-nav-div3>a:hover{
+    color:#fff;
+  }
+  /* 第四行样式 */
+  .footer-nav-div4{
+    width:580px;
+    margin:20px auto;
+  }
+  /* ul样式 */
+  .footer-nav-div4-ul{
+    width:100%;
+  }
+  .footer-nav-div4-ul>li{
+    float:left;
+    width:150px;
   }

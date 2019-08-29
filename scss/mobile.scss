@@ -1,0 +1,64 @@
+// 简单reset
+*{margin: 0;padding:0;box-sizing: border-box}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+// 第一部分
+// 1.设置背景图片
+.w-download-top{
+  width:100%;
+  height:560px;
+  background:url(../public/mobile/app__downlodd_03.jpg) no-repeat;
+  background-size:100% 100%;
+}
+// 2.设置内容居中
+.w_download_box{
+  
+  width:980px;
+  height: 560px;
+  margin:0 auto;
+}
+// 3.设置文字样式
+.w_download_txt{
+  float:left;
+  padding-top:85px;
+  color:#fff;
+  width:638px;
+  font:24px/35px "microsoft yahei";
+}
+// 4.文字框
+.w_download_txttop{
+  width:100%;
+}
+.w_download_txttop>span{
+  width:100%;
+  font: 60px/154px "microsoft yahei";
+  font-weight: 700;
+  letter-spacing: 18px;
+  color:#fff;
+}
+// 5.ios图标和安卓图标
+.w_download_txtbutt{
+  padding-top:40px;
+  width:100%;
+  height:160px;
+}
+// 6.右边手机图标
+.w_download_focusbox{
+  float: left;
+  width:342px;
+  height:494px;
+  margin-top:66px;
+  background: url(../public/mobile/download_focus.png) no-repeat;
+}
+// 7.ul内边距
+.w_download_focus{
+  padding:80px 24px 0 24px;
+  width:294px;
+  height:414px;
+}
+// 第二部分
+// 第三部分
