@@ -1,0 +1,212 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #f0f0f0;
+  font-family: microsoft yahei,Gotham,Helvetica Neue,Helvetica,Arial,sans-serif; }
+
+.w_storybanner {
+  width: 100%;
+  height: 376px;
+  position: relative; }
+  .w_storybanner ul {
+    width: 100%;
+    height: 376px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../public/story/load.gif) #000 center center no-repeat;
+    z-index: 0; }
+    .w_storybanner ul li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 376px; }
+      .w_storybanner ul li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+      .w_storybanner ul li:first-child a {
+        background: url(../public/story/story_banner_20151125_1.jpg) center top no-repeat; }
+      .w_storybanner ul li:nth-child(2) a {
+        background: url(../public/story/story_banner_20151125_2.jpg) center top no-repeat; }
+      .w_storybanner ul li:nth-child(3) a {
+        background: url(../public/story/story_banner_20151125_3.jpg) center top no-repeat; }
+      .w_storybanner ul li:nth-child(4) a {
+        background: url(../public/story/story_banner_20151125_4.jpg) center top no-repeat; }
+      .w_storybanner ul li:nth-child(5) a {
+        background: url(../public/story/story_banner_20151125_5.jpg) center top no-repeat; }
+
+.tabbtn {
+  position: absolute;
+  left: 45%;
+  top: 346px; }
+  .tabbtn a {
+    float: left;
+    width: 30px;
+    height: 10px;
+    background: #ccc;
+    margin-right: 10px; }
+    .tabbtn a:hover {
+      background: #f30; }
+
+.s_mn_center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.w_sub_title {
+  width: 1180px;
+  padding: 0 10px; }
+  .w_sub_title:after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.w_sub_title_left, .w_sub_title_right f14 {
+  float: left;
+  width: 50%; }
+
+.w_sub_title_left h2 {
+  line-height: 70px;
+  height: 70px;
+  float: left; }
+
+.w_sub_title_left ul {
+  float: left; }
+  .w_sub_title_left ul li {
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 22px 25px 0 0; }
+    .w_sub_title_left ul li a {
+      color: #888; }
+    .w_sub_title_left ul li:hover a {
+      color: #f30; }
+
+.w_sub_title_right, .w_sub_title_right a {
+  text-align: right;
+  line-height: 70px;
+  color: #888;
+  font-size: 14px; }
+  .w_sub_title_right a:hover {
+    color: #f30; }
+
+.storylist {
+  margin-bottom: 20px;
+  width: 100%; }
+  .storylist:after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.storylist_left {
+  float: left;
+  width: 373px;
+  margin: 0 10px 20px 10px;
+  background: #fff; }
+
+.pic, .pic a > img {
+  width: 100%;
+  height: 200px; }
+
+.storylist_nr {
+  width: 360px;
+  height: 170px;
+  padding: 10px;
+  margin: 0 auto; }
+
+.storylist_title {
+  width: 100%;
+  height: 30px; }
+
+.storylist_tt16 {
+  float: left;
+  font-size: 20px;
+  max-width: 225px;
+  overflow: hidden;
+  color: #09f;
+  height: 30px; }
+  .storylist_tt16:hover {
+    color: #f30; }
+
+.story_hudong {
+  float: right; }
+
+.story_hot16 {
+  float: right;
+  background: url(../public/story/story_09.jpg) no-repeat;
+  margin-left: 10px;
+  padding-left: 20px;
+  margin-top: 5px;
+  font: 12px/16px "Microsoft YaHei";
+  color: #888;
+  text-align: right; }
+
+.story_time {
+  width: 100%;
+  height: 30px;
+  color: #888;
+  font-size: 14px; }
+  .story_time a {
+    color: #888; }
+
+.story_wz {
+  width: 100%;
+  height: 80px;
+  color: #888;
+  text-indent: 30px;
+  font: 14px/20px "Microsoft YaHei"; }
+
+.w_page {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 80px;
+  padding-top: 30px; }
+
+.page {
+  float: right; }
+
+.yeshu, .prev {
+  float: left; }
+
+.yeshu a {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 20px; }
+  .yeshu a:hover {
+    background: #f30; }
+
+.yeshu .currient {
+  background: #f30; }
+
+.prev {
+  margin-left: 20px; }
+  .prev a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: #ccc;
+    border-radius: 18px;
+    padding: 0 15px;
+    font-family: 'microsoft yahei','微软雅黑'; }
+    .prev a:hover {
+      background: #f30; }
