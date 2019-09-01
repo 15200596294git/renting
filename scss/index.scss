@@ -9,6 +9,178 @@ a{
 body{
   background:#f0f0f0;
 }
+// 1.登录时的灰色背景
+.bg-all-dark{
+  position: fixed;
+  width:100%;
+  height:100%;
+  background:#000;
+  opacity: .36;
+  z-index:9999;
+  top:0;
+  left:0;
+}
+// 1.1添加控制元素显示或隐藏的类
+.d-none{
+  display:none;
+}
+// 2.注册登录窗口
+$width:380px;
+.newa_login_main{
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:$width;
+  padding:0 50px 16px;
+  background:#fff;
+  z-index: 9999;
+  margin-left: -$width/2;
+  margin-top:-219px;
+}
+// 2.1关闭窗口的小叉
+.newa_close{
+  position: absolute;
+  width:12px;
+  height:12px;
+  top:16px;
+  left:93%;
+  background:url(../public/index/newa_close.png) no-repeat;
+}
+// 2.2登录方式
+.newa_login_tab{
+  width:220px;
+  height:32px;
+  margin:29px auto 37px;
+  // 2.21 li样式
+  li{
+    float:left;
+    width:110px;
+    line-height: 30px;
+    font-size:18px;
+    text-align: center;
+    color:#777;
+    cursor: pointer;
+  }
+}
+// 2.3选中时的样式
+.newa_login_t_active{
+  span{
+    display: inline-block;
+    width:73px;
+    border-bottom: 2px solid #ff9180;
+  }
+}
+// 2.4快捷登录
+.newa_login_con{
+  width:280px;
+  li{
+    position:relative;
+    margin-bottom:18px;
+    i{
+      position: absolute;
+      display: inline-block;
+    }
+  }
+  input{
+    width:282px;
+    height:44px;
+    font-size:14px;
+    border:1px solid #eeeeee;
+    padding-left:35px;
+  }
+}
+// 2.5小图标
+@mixin bg($y,$w,$h) {
+  background: url(../public/index/login_icon.png) no-repeat 0 $y;
+  width: $w;
+  height: $h;
+  top:14px;
+  left:9px;
+}
+// 2.51手机号
+.newa_kj_icon{
+ @include bg(-74px,14px,18px)
+}
+// 2.52图形验证码
+.newa_piccode_icon{
+  @include bg(-97px,17px,14px)
+}
+// 2.53短信验证码
+.newa_code_icon{
+  @include bg(-116px,16px,14px)
+}
+// 2.6设置二维码图片
+.newa_piccode{
+  display: block;
+  position: absolute;
+  width:80px;
+  height:36px;
+  right: 0;
+  top:2px;
+  img{
+    width:80px;
+    height:36px;
+  }
+}
+// 2.7设置短信文字提示
+.newa_code{
+  display: block;
+  position: absolute;
+  right:0px;
+  top:0;
+  color:#f37e71;
+  height:40px;
+  line-height: 44px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size:14px;
+}
+// 2.8忘记密码
+.newa_foget{
+  height:14px;
+  line-height: 14px;
+  margin-bottom:28px;
+  a{
+    float:right;
+    font-size:14px;
+    color:#f37e71;
+  }
+}
+// 2.9登录按钮
+.newa_login_btn{
+  display: block;
+  width:310px;
+  height:70px;
+  background:url(../public/index/login_btn.png) no-repeat;
+  margin-left: -15px;
+  &:hover{
+    background: url(../public/index/login_btn.png) -310px 0 no-repeat
+  }
+}
+// 3.0文字提示
+.newa_zc{
+  color:#999;
+  font-size:14px;
+}
+// 3.1登录方式 qq或者微博
+.newa_coop{
+  margin-top:28px;
+  a{
+    display: inline-block;
+  }
+}
+// 3.2背景图片
+.newa_sina{
+  background:url(../public/index/login_icon.png) no-repeat 0 -25px;
+  width:28px;
+  height:23px;
+}
+.newa_qq{
+  background:url(../public/index/login_icon.png) no-repeat -1px 0;
+  width:18px;
+  height:20px;
+  margin-left: 25px;
+}
 .good{
   background:#ffffff;
 }

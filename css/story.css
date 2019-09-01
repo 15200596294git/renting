@@ -59,6 +59,8 @@ body {
     margin-right: 10px; }
     .tabbtn a:hover {
       background: #f30; }
+  .tabbtn .active {
+    background: #f30; }
 
 .s_mn_center {
   width: 1200px;
