@@ -225,3 +225,69 @@ body{
   border-bottom:1px solid #eee;
   position: relative;
 }
+// 清除浮动带来的影响
+.clearfix:after{
+  display:block;
+  content:"";
+  clear:both
+}
+// 房间位置
+.s_mn_screenqy{
+  float:left;
+  width:100%;
+}
+// 字体样式
+.s_mn_screen_tit{
+  float:left;
+  width: 72px;
+  text-align: right;
+  margin-left: 0;
+  color: #AAAAAA;
+  font: 14px/30px "microsoft yahei";
+}
+.f12{
+  height:30px;
+  line-height:30px;
+  font-size:12px;
+}
+.w_listbx{
+  float:left;
+  width:93px;
+}
+.w_listspan2{
+  width:50px;
+  height:30px;
+  line-height:30px;
+  color:#fff;
+  text-align: center;
+  a{
+    color:#fff;
+    background-color:#FF6C5C;
+    display: block;
+  }
+}
+#list_tab{
+  li{
+    float:left;
+    width:93px;
+    margin:0 5px 0 0 ;
+    padding:0;
+    height:30px;
+    border:none;
+  }
+ .w_listspan{
+   cursor: pointer;
+   padding:0 26px 0 18px;
+   background:url(../public/search/list_more.png) no-repeat;
+   background-position:72px -6px;
+   height:12px;
+ }
+ .w-listabfocus{
+   cursor: pointer;
+   padding:6px 26px 7px 18px;
+  background:#ff6c5c url(../public/search/list_more.png) no-repeat;
+  background-position:72px -29px;
+  color:#fff;
+}
+} 
+// 悬浮li时的样式
