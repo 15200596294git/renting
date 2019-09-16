@@ -247,12 +247,14 @@ body {
   padding: 0;
   height: 30px;
   border: none; }
+
 #list_tab .w_listspan {
   cursor: pointer;
   padding: 0 26px 0 18px;
   background: url(../public/search/list_more.png) no-repeat;
   background-position: 72px -6px;
   height: 12px; }
+
 #list_tab .w-listabfocus {
   cursor: pointer;
   padding: 6px 26px 7px 18px;
@@ -279,6 +281,7 @@ body {
   background: #fff;
   top: 36px;
   box-shadow: 0 1px 5px #ddd; }
+
 #w_listect a {
   padding: 0 5px;
   line-height: 24px;
@@ -300,6 +303,7 @@ body {
 .s_mn_screenlist .w_listspan3 .s_mn_screen_aover, .s_mn_screenlist .w_listspan3 a:hover {
   background: #FF6C5C;
   color: #fff; }
+
 .s_mn_screenlist .w_listspan3 a {
   font: 12px/30px "microsoft yahei";
   padding: 0 13px;
@@ -732,4 +736,89 @@ hr {
   border: 1px solid #DDDDDD;
   background-color: #fff; }
 
-/*# sourceMappingURL=search.css.map */
+.s_mn_recommended_bottom {
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px dotted #ddd;
+  background: #f9f9f9; }
+
+.s_mn_center2 {
+  width: 1200px;
+  margin: 0 auto; }
+  .s_mn_center2::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.s_mn_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px; }
+
+.s_mn_t1 {
+  float: left;
+  padding-left: 15px;
+  width: 180px;
+  height: 40px;
+  background: url(../public/search/title_icon.png) center left no-repeat;
+  background-size: 10px;
+  font: 16px/40px "Microsoft YaHei";
+  color: #555; }
+
+.s_mn_rec_bottom {
+  width: 100%; }
+
+.s_mn_module3x {
+  float: left;
+  width: 300px; }
+
+.s_mn_place3 {
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: 300px;
+  padding: 10px; }
+
+.s_mn_housingbox3 {
+  width: 100%; }
+
+.s_mn_housing_img3 {
+  position: relative;
+  width: 100%;
+  height: 165px; }
+  .s_mn_housing_img3 a {
+    display: block;
+    width: 100%;
+    height: 165px; }
+    .s_mn_housing_img3 a img {
+      width: 100%;
+      height: 165px; }
+
+.s_mn_housing_textbox3 {
+  width: 278px;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  background: #fff; }
+
+.s_mn_housing_title3 {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 278px;
+  height: 30px;
+  font: 700 14px/30px "宋体"; }
+  .s_mn_housing_title3 a {
+    color: #09f; }
+
+.s_mn_lates_houseintroduce {
+  padding: 0 10px;
+  height: 20px; }
+  .s_mn_lates_houseintroduce .s_mn_house_area {
+    font: 12px/16px "Microsoft Yahei";
+    color: #999999;
+    float: none;
+    padding: 0 6px; }
+  .s_mn_lates_houseintroduce .s_mn_house_price {
+    float: right;
+    color: #f30;
+    font: 14px/20px "microsoft yahei"; }

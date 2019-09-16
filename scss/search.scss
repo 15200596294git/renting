@@ -837,3 +837,104 @@ hr{
     background-color: #fff;
 }
 // **最近浏览
+// 最外层div
+.s_mn_recommended_bottom{
+  padding: 10px 0;
+  width:100%;
+  border-bottom: 1px dotted #ddd;
+  background: #f9f9f9;
+}
+// 内容居中显示
+.s_mn_center2{
+  width:1200px;
+  margin:0 auto;
+  &::after{
+    display: block;
+    content:"";
+    clear:both;
+  }
+}
+// 标题部分
+.s_mn_title{
+  width:100%;
+  height:40px;
+  line-height:40px;
+}
+.s_mn_t1{
+  float:left;
+  padding-left: 15px;
+  width:180px;
+  height:40px;
+  background:url(../public/search/title_icon.png) center left no-repeat;
+  background-size:10px;
+  font: 16px/40px "Microsoft YaHei";
+  color:#555;
+}
+// 最近浏览房源列表
+.s_mn_rec_bottom{
+  width:100%;
+}
+// 列表浮动
+.s_mn_module3x{
+  float:left; 
+  width:300px;
+}
+// 设置定位和宽度
+.s_mn_place3{
+  position: relative;
+  z-index:0;
+  display: block;
+  width:300px;
+  padding:10px;
+}
+.s_mn_housingbox3{
+  width:100%;
+}
+// img的高度
+.s_mn_housing_img3{
+  position: relative;
+  width:100%;
+  height:165px;
+  a{
+    display: block;
+    width: 100%;
+    height: 165px;
+    img{
+      width: 100%;
+      height: 165px;
+    }
+  }
+}
+// 下面文字部分
+.s_mn_housing_textbox3{
+  width: 278px;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  background: #fff;
+}
+.s_mn_housing_title3{
+  margin: 0 auto;
+    padding: 0 10px;
+    width: 278px;
+    height: 30px;
+    font: 700 14px/30px "宋体";
+    a{
+      color:#09f;
+    }
+}
+.s_mn_lates_houseintroduce{
+  padding: 0 10px;
+  height: 20px;
+  .s_mn_house_area{
+    font: 12px/16px "Microsoft Yahei";
+    color: #999999;
+    float: none;
+    padding: 0 6px;
+  }
+  .s_mn_house_price{
+    float: right;
+    color: #f30;
+    font: 14px/20px "microsoft yahei";
+  }
+}
