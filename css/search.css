@@ -736,6 +736,33 @@ hr {
   border: 1px solid #DDDDDD;
   background-color: #fff; }
 
+.w_listbz {
+  width: 234px;
+  height: 288px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd; }
+
+.w_listbzicon {
+  width: 100%;
+  height: 167px;
+  text-align: center; }
+
+.w_listbzul {
+  margin: 0 auto;
+  padding: 8px 0;
+  width: 200px;
+  border-top: 1px solid #ddd; }
+  .w_listbzul li {
+    margin-bottom: 5px;
+    padding-left: 25px;
+    width: 173px;
+    height: 20px;
+    background: url(//assets.muniao.com/assets2/2015/images/bz_smallicon.png) center left no-repeat;
+    color: #888;
+    line-height: 20px; }
+    .w_listbzul li span {
+      font-size: 14px; }
+
 .s_mn_recommended_bottom {
   padding: 10px 0;
   width: 100%;

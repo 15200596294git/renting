@@ -14,7 +14,6 @@ $(function(){
       // 7.用Jquery函数replaceAll,将请求回的数据放到id为 header 的元素里
       $(result).replaceAll("#header");
       // 8.测试：打印接收到的数据，(看数据是否接收到)
-      
-      }
-  })
+     }
+  });
 });
