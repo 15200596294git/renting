@@ -31,7 +31,7 @@ $blue:#09f;
     position: absolute;
     left:0;
     top:0;
-    background:url(../public/story/load.gif) #000 center center no-repeat;
+    background:url(http://127.0.0.1:5050/story/load.gif) #000 center center no-repeat;
     z-index: 0;
     li{
       position: absolute;
@@ -46,27 +46,27 @@ $blue:#09f;
       }
       &:first-child{
         a{
-          background:url(../public/story/story_banner_20151125_1.jpg) center top no-repeat;
+          background:url(http://127.0.0.1:5050/story/story_banner_20151125_1.jpg) center top no-repeat;
         }
       }
       &:nth-child(2){
         a{
-          background:url(../public/story/story_banner_20151125_2.jpg) center top no-repeat;
+          background:url(http://127.0.0.1:5050/story/story_banner_20151125_2.jpg) center top no-repeat;
         }
       }
       &:nth-child(3){
         a{
-          background:url(../public/story/story_banner_20151125_3.jpg) center top no-repeat;
+          background:url(http://127.0.0.1:5050/story/story_banner_20151125_3.jpg) center top no-repeat;
         }
       }
       &:nth-child(4){
         a{
-          background:url(../public/story/story_banner_20151125_4.jpg) center top no-repeat;
+          background:url(http://127.0.0.1:5050/story/story_banner_20151125_4.jpg) center top no-repeat;
         }
       }
       &:nth-child(5){
         a{
-          background:url(../public/story/story_banner_20151125_5.jpg) center top no-repeat;
+          background:url(http://127.0.0.1:5050/story/story_banner_20151125_5.jpg) center top no-repeat;
         }
       }
      
@@ -210,7 +210,7 @@ $blue:#09f;
 // 9.2设置热度
 .story_hot16{
   float:right;
-  background:url(../public/story/story_09.jpg) no-repeat;
+  background:url(http://127.0.0.1:5050/story/story_09.jpg) no-repeat;
   margin-left:10px;
   padding-left:20px;
   margin-top:5px;

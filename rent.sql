@@ -7,7 +7,12 @@ CREATE DATABASE rent CHARSET=UTF8;
 #进入数据库
 USE rent;
 #表1,保存用户基本信息的表
-CREATE TABLE rent_user();
+CREATE TABLE rent_user(
+	uid INT PRIMARY KEY AUTO_INCREMENT,
+	#保存用户手机号
+	uPhone CHAR(11),
+	uPwd VARCHAR(32),
+);
 #表2,保存首页、特色页的banner图片，发现页的四张轮播图(6张图)
 CREATE TABLE rent_banner();
 #表3,保存首页的热门城市图片及详情

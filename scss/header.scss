@@ -131,7 +131,7 @@ $width:380px;
   height:12px;
   top:16px;
   left:93%;
-  background:url(../public/index/newa_close.png) no-repeat;
+  background:url(http://127.0.0.1:5050/index/newa_close.png) no-repeat;
 }
 // 2.2登录方式
 .newa_login_tab{
@@ -178,7 +178,7 @@ $width:380px;
 }
 // 2.5小图标
 @mixin bg($y,$w,$h) {
-  background: url(../public/index/login_icon.png) no-repeat 0 $y;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 $y;
   width: $w;
   height: $h;
   top:14px;
@@ -238,10 +238,10 @@ $width:380px;
   display: block;
   width:310px;
   height:70px;
-  background:url(../public/index/login_btn.png) no-repeat;
+  background:url(http://127.0.0.1:5050/index/login_btn.png) no-repeat;
   margin-left: -15px;
   &:hover{
-    background: url(../public/index/login_btn.png) -310px 0 no-repeat
+    background: url(http://127.0.0.1:5050/index/login_btn.png) -310px 0 no-repeat
   }
 }
 // 3.0文字提示
@@ -258,13 +258,55 @@ $width:380px;
 }
 // 3.2背景图片
 .newa_sina{
-  background:url(../public/index/login_icon.png) no-repeat 0 -25px;
+  background:url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -25px;
   width:28px;
   height:23px;
 }
 .newa_qq{
-  background:url(../public/index/login_icon.png) no-repeat -1px 0;
+  background:url(http://127.0.0.1:5050/index/login_icon.png) no-repeat -1px 0;
   width:18px;
   height:20px;
   margin-left: 25px;
+}
+// 普通登录
+.newa_login_input{
+  li{
+    position: relative;
+    margin-bottom: 18px;
+    i{
+      position: absolute;
+    display: inline-block;
+    top: 14px;
+    left: 9px;
+    }
+  }
+}
+.newa_email_tel_icon{
+  background: url(http://127.0.0.1:5050/header/login_icon.png) no-repeat 0 -53px;
+  width: 13px;
+  height: 17px;
+}
+.newa_l_password_icon{
+  background: url(http://127.0.0.1:5050/header/login_icon.png) no-repeat -18px -53px;
+  width: 13px;
+  height: 17px;
+}
+// 自动登录
+.newa_foget{
+  height: 14px;
+    line-height: 14px;
+    margin-bottom: 28px;
+    label{
+      color: #999999;
+    font-size: 14px;
+    }
+}
+.newa_foget_m{
+  float: right;
+    color: #ff9180;
+    font-size: 14px;
+}
+#newa_auto_l{
+  width:13px;
+  height:13px;
 }

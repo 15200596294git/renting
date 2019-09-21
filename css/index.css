@@ -122,7 +122,7 @@ body {
 
 .ad-box {
   width: 100%;
-  background: url(../public/index/s_mn_ad_bg.jpg);
+  background: url(http://127.0.0.1:5050/index/s_mn_ad_bg.jpg);
   text-align: center; }
 
 .adbox-con {
@@ -150,7 +150,7 @@ body {
   height: 104px; }
 
 .ad-con-icon {
-  background: url(../public/index/index_bz1.png) no-repeat;
+  background: url(http://127.0.0.1:5050/index/index_bz1.png) no-repeat;
   background-size: 100%; }
 
 .ad-con-div {
@@ -368,7 +368,7 @@ body {
   padding-left: 15px;
   width: 180px;
   height: 40px;
-  background: url(../public/index/title_icon.png) center left no-repeat;
+  background: url(http://127.0.0.1:5050/index/title_icon.png) center left no-repeat;
   background-size: 10px;
   color: #555;
   font-size: 16px; }
@@ -421,18 +421,18 @@ body {
   display: block;
   width: 300px;
   height: 46px;
-  background: url(../public/index/s_mn_inf_list_abg.png) 0 -46px no-repeat;
+  background: url(http://127.0.0.1:5050/index/s_mn_inf_list_abg.png) 0 -46px no-repeat;
   color: #555;
   text-indent: 20px;
   font-size: 14px;
   line-height: 46px; }
 
 .s_mn_information_list > li:first-child > a {
-  background: url(../public/index/s_mn_inf_list_abg.png) 0 0 no-repeat;
+  background: url(http://127.0.0.1:5050/index/s_mn_inf_list_abg.png) 0 0 no-repeat;
   color: #fff; }
 
 .s_mn_inf_list_a:hover {
-  background: url(../public/index/s_mn_inf_list_abg.png) 0 0 no-repeat;
+  background: url(http://127.0.0.1:5050/index/s_mn_inf_list_abg.png) 0 0 no-repeat;
   color: #fff; }
 
 .last-box {
@@ -465,13 +465,13 @@ body {
   font-family: "宋体"; }
 
 .s_mn_li_nav_a {
-  background: url(../public/index/s_mn_li_nav.png) -23px 0 no-repeat; }
+  background: url(http://127.0.0.1:5050/index/s_mn_li_nav.png) -23px 0 no-repeat; }
 
 .s_mn_li_nav > li:first-child > a {
-  background: url(../public/index/s_mn_li_nav.png) #f30 0 0 no-repeat; }
+  background: url(http://127.0.0.1:5050/index/s_mn_li_nav.png) #f30 0 0 no-repeat; }
 
 .s_mn_li_nav_a:hover {
-  background: url(../public/index/s_mn_li_nav.png) #f30 0 0 no-repeat; }
+  background: url(http://127.0.0.1:5050/index/s_mn_li_nav.png) #f30 0 0 no-repeat; }
 
 .s_mn_lates_houselist {
   position: absolute;

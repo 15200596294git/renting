@@ -131,7 +131,7 @@ body {
   height: 12px;
   top: 16px;
   left: 93%;
-  background: url(../public/index/newa_close.png) no-repeat; }
+  background: url(http://127.0.0.1:5050/index/newa_close.png) no-repeat; }
 
 .newa_login_tab {
   width: 220px;
@@ -167,21 +167,21 @@ body {
     padding-left: 35px; }
 
 .newa_kj_icon {
-  background: url(../public/index/login_icon.png) no-repeat 0 -74px;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -74px;
   width: 14px;
   height: 18px;
   top: 14px;
   left: 9px; }
 
 .newa_piccode_icon {
-  background: url(../public/index/login_icon.png) no-repeat 0 -97px;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -97px;
   width: 17px;
   height: 14px;
   top: 14px;
   left: 9px; }
 
 .newa_code_icon {
-  background: url(../public/index/login_icon.png) no-repeat 0 -116px;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -116px;
   width: 16px;
   height: 14px;
   top: 14px;
@@ -223,10 +223,10 @@ body {
   display: block;
   width: 310px;
   height: 70px;
-  background: url(../public/index/login_btn.png) no-repeat;
+  background: url(http://127.0.0.1:5050/index/login_btn.png) no-repeat;
   margin-left: -15px; }
   .newa_login_btn:hover {
-    background: url(../public/index/login_btn.png) -310px 0 no-repeat; }
+    background: url(http://127.0.0.1:5050/index/login_btn.png) -310px 0 no-repeat; }
 
 .newa_zc {
   color: #999;
@@ -238,12 +238,48 @@ body {
     display: inline-block; }
 
 .newa_sina {
-  background: url(../public/index/login_icon.png) no-repeat 0 -25px;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -25px;
   width: 28px;
   height: 23px; }
 
 .newa_qq {
-  background: url(../public/index/login_icon.png) no-repeat -1px 0;
+  background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat -1px 0;
   width: 18px;
   height: 20px;
   margin-left: 25px; }
+
+.newa_login_input li {
+  position: relative;
+  margin-bottom: 18px; }
+  .newa_login_input li i {
+    position: absolute;
+    display: inline-block;
+    top: 14px;
+    left: 9px; }
+
+.newa_email_tel_icon {
+  background: url(http://127.0.0.1:5050/header/login_icon.png) no-repeat 0 -53px;
+  width: 13px;
+  height: 17px; }
+
+.newa_l_password_icon {
+  background: url(http://127.0.0.1:5050/header/login_icon.png) no-repeat -18px -53px;
+  width: 13px;
+  height: 17px; }
+
+.newa_foget {
+  height: 14px;
+  line-height: 14px;
+  margin-bottom: 28px; }
+  .newa_foget label {
+    color: #999999;
+    font-size: 14px; }
+
+.newa_foget_m {
+  float: right;
+  color: #ff9180;
+  font-size: 14px; }
+
+#newa_auto_l {
+  width: 13px;
+  height: 13px; }

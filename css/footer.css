@@ -31,11 +31,11 @@ a {
   }
   /* 微信背景图片 */
   .social-wx{
-    background:url(../public/footer/footer_weibo.png) no-repeat;
+    background:url(http://127.0.0.1:5050/footer/footer_weibo.png) no-repeat;
   }
   /* 微博背景图片 */
   .social-sina{
-    background:url(../public/footer/weixin.png) no-repeat;
+    background:url(http://127.0.0.1:5050/footer/weixin.png) no-repeat;
     margin-left:15px;
   }
 

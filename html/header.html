@@ -1,35 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/header.css">
-  <script src="../js/jquery-3.4.1.js"></script>
-  <script src="../js/event.js"></script>
-  <title>Document</title>
-</head>
-<body>
+
   <!-- 左中右三部分 -->
   <div class="d-flex">
     <!-- 左边图片 -->
     <div class="left">
-      <img src="../public/header/pc_new_logo.png" alt="">
+      <img src="http://127.0.0.1:5050/header/pc_new_logo.png" alt="">
     </div>
     <!-- 中间导航 -->
     <div class="middle">
       <ul class="middle-ul">
         <li>
-          <a href="index.html" class="middle-ul-link active">首页</a>
+          <a href="javascript:void(0);" class="middle-ul-link active">首页</a>
         </li>
         <li>
-          <a href="features.html" class="middle-ul-link">特色短租</a>
+          <a href="javascript:void(0);" class="middle-ul-link">特色短租</a>
         </li>
         <li>
-          <a href="story.html" class="middle-ul-link">发现</a>
+          <a href="javascript:void(0);" class="middle-ul-link">发现</a>
         </li>
         <li>
-          <a href="mobile.html" class="middle-ul-link">手机木鸟</a>
+          <a href="javascript:void(0);" class="middle-ul-link">手机木鸟</a>
         </li>
       </ul>
     </div>
@@ -55,7 +44,7 @@
        </li>
      </ul>
      <!-- 快捷登录 -->
-     <div class="newa_login_con">
+     <div class="newa_login_con" style="display: none">
        <ul class="newa_login_input">
          <li>
            <i class="newa_kj_icon"></i>
@@ -65,7 +54,7 @@
            <i class="newa_piccode_icon"></i>
            <input type="text" placeholder="图形验证码">
            <a href="javascript:void(0);" class="newa_piccode">
-             <img src="../public/index/VerifyCode.gif" alt="">
+             <img src="http://127.0.0.1:5050/index/VerifyCode.gif" alt="">
            </a>
          </li>
          <li>
@@ -85,7 +74,31 @@
        </div>
      </div>
      <!-- 普通登录 -->
-     <div></div>
+     <div class="newa_login_con">
+      <ul class="newa_login_input">
+        <li>
+            <i class="newa_email_tel_icon"></i>
+            <input type="text" id="Login_Email_Tel_M" placeholder="手机号">
+        </li>
+        <li>
+            <i class="newa_l_password_icon"></i>
+            <input type="password" id="Login_Pwd" placeholder="密码">
+        </li>
+        <li>
+            <i class="newa_piccode_icon"></i>
+            <input type="text" id="login_ValidCodes" name="newa_piccode" placeholder="图形验证码">
+            <a class="newa_piccode" href="javascript:void(0);"><img id="ValidImgs" src="http://127.0.0.1:5050/header/VerifyCode.gif" onclick="getImageCodes(this)"></a>
+        </li>
+    </ul>
+    <div class="newa_foget">
+        <a class="newa_foget_m" href="http://user2.muniao.com/forgetpass">忘记密码？</a>
+        <input id="newa_auto_l" type="checkbox">
+        <label for="newa_auto_l">下次自动登录</label>
+    </div>
+    <a class="newa_login_btn newa_ordinary" href="javascript:void(0);"></a>
+    
+    <div class="newa_coop">
+        <a class="newa_sina" href="https://api.weibo.com/oauth2/authorize?state=http%3A%2F%2Fwww.muniao.com%2Fuser%2Fcenter&amp;client_id=3437054643&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fwww.muniao.com%2FHome%2FCallBack%3Fchannel%3Dweibo"></a>
+        <a class="newa_qq" href="http://openapi.qzone.qq.com/oauth/show?which=Login&amp;response_type=code&amp;client_id=101214959&amp;redirect_uri=http%3A%2F%2Fwww.muniao.com%2Fuser%2Fcenter&amp;scope=get_user_info,get_fanslist,get_idollist,add_idol"></a>
+     </div>
    </div>
-</body>
-</html>
