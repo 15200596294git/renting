@@ -1,0 +1,5668 @@
+<template>
+<div>
+  <!-- 头部 -->
+  <header id="header"></header>
+  <!-- 两大部分 -->
+  <!-- 第一部分 -->
+  <div class="s_mn_mainbox">
+    <div class="s_mn_screenbox">
+      <form action="" class="s_mn_form">
+        <div class="s_mn_center">
+          <!-- 上 -->
+          <div class="s_mn_screen_ipt">
+            <!-- 1. -->
+            <div class="s_mn_search_place">
+              <div class="s_mn_search_city">
+                <input type="text" value="北京" autocomplete="off" class="s_mn_city_input"></div>
+              <div class="s_mn_search_landmark">
+                <input type="text" placeholder="请输入地点、房间名、房东姓名查询" class="s_mn_landmark_input w_list_postionicon">
+              </div>
+            </div>
+            <!-- 2. -->
+            <div class="s_mn_search_time">
+              <div class="s_mn_checkin">
+                <input type="text" placeholder="请选择入住时间" class="s_mn_time_input w_list_dateicon">
+              </div>
+              <span class="s_mn_timespan blue">至</span>
+              <div class="s_mn_checkout">
+                <input type="text" placeholder="请选择退房时间" class="s_mn_time_input">
+              </div>
+            </div>
+            <!-- 3. -->
+            <div class="s_mn_search_number">
+              <div class="s_mn_number_select">
+                <span class="s_mn_num_ipt">1人</span>
+              </div>
+              <ul class="s_mn_number_selectlist" style="display: none">
+                <li>
+                  <a href="javascript:void(0);">1人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">2人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">3人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">4人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">5人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">6人</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">7人</a>
+                </li>
+              </ul>
+            </div>
+            <!-- 4. -->
+            <div class="s_mn_search_submit2">
+              <input type="text" value="搜&nbsp;索&nbsp;房&nbsp;间" class="w_list_button">
+            </div>
+          </div>
+          <!-- 下 -->
+          <div class="s_mn_screen_ipt w_searchlist cleafix">
+            <ul class="s_mn_screen_list1 cleafix">
+              <li class="clearfix czc_000000048">
+                <div class="s_mn_screenqy">
+                  <div class="s_mn_screen_tit">房间位置：</div>
+                  <div class="f12" id="list_tab">
+                    <ul>
+                      <div class="w_listbx">
+                        <div class="w_listspan2">
+                          <a href="javascript:void(0);" class="s_mn_screen_aover">不限</a>
+                        </div>
+                      </div>
+                      <li>
+                        <span class="w_listspan">行政区域</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">热门地标</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">商圈周边</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">机场车站</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">学校周边</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">商务办公</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">景点周边</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">医院周边</span>
+                      </li>
+                      <li>
+                        <span class="w_listspan">展馆周边</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="w_listect" class="f12">
+                    <div class="w_listectnone" style="display:none">
+                      <a href="javascript:void(0);" title="昌平区">昌平区</a>
+                      <a href="javascript:void(0);" title="朝阳区">朝阳区</a>
+                      <a href="javascript:void(0);" title="崇文区">崇文区</a>
+                      <a href="javascript:void(0);" title="大兴区">大兴区</a>
+                      <a href="javascript:void(0);" title="东城区">东城区</a>
+                      <a href="javascript:void(0);" title="房山区">房山区</a>
+                      <a href="javascript:void(0);" title="丰台区">丰台区</a>
+                      <a href="javascript:void(0);" title="海淀区">海淀区</a>
+                      <a href="javascript:void(0);" title="怀柔区">怀柔区</a>
+                      <a href="javascript:void(0);" title="门头沟区">门头沟区</a>
+                      <a href="javascript:void(0);" title="密云区">密云区</a>
+                      <a href="javascript:void(0);" title="平谷区">平谷区</a>
+                      <a href="javascript:void(0);" title="石景山区">石景山区</a>
+                      <a href="javascript:void(0);" title="顺义区">顺义区</a>
+                      <a href="javascript:void(0);" title="通州区">通州区</a>
+                      <a href="javascript:void(0);" title="西城区">西城区</a>
+                      <a href="javascript:void(0);" title="宣武区">宣武区</a>
+                      <a href="javascript:void(0);" title="延庆区">延庆区</a>
+                    </div>
+                    <div class="w_listectnone" style="display:none">
+                      <a href="javascript(0);" title="北京西站" target="_self">北京西站</a>
+                      <a href="javascript(0);" title="建国门" target="_self">建国门</a>
+                      <a href="javascript(0);" title="崇文门" target="_self">崇文门</a>
+                      <a href="javascript(0);" title="五棵松" target="_self">五棵松</a>
+                      <a href="javascript(0);" title="亚运村" target="_self">亚运村</a>
+                      <a href="javascript(0);" title="欢乐谷" target="_self">欢乐谷</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+
+                      <a href="javascript(0);" title="双井" target="_self">双井</a>
+                      <a href="javascript(0);" title="劲松" target="_self">劲松</a>
+                      <a href="javascript(0);" title="潘家园" target="_self">潘家园</a>
+                      <a href="javascript(0);" title="百环花园" target="_self">百环花园</a>
+                      <a href="javascript(0);" title="当代" target="_self">当代</a>
+                      <a href="javascript(0);" title="广渠门" target="_self">广渠门</a>
+                      <a href="javascript(0);" title="中关村" target="_self">中关村</a>
+                      <a href="javascript(0);" title="大望路" target="_self">大望路</a>
+                      <a href="javascript(0);" title="国贸中心" target="_self">国贸中心</a>
+                      <a href="javascript(0);" title="建外大街" target="_self">建外大街</a>
+                      <a href="javascript(0);" title="双榆树" target="_self">双榆树</a>
+                      <a href="javascript(0);" title="南磨房" target="_self">南磨房</a>
+                      <a href="javascript(0);" title="CBD" target="_self">CBD</a>
+                      <a href="javascript(0);" title="人民大学" target="_self">人民大学</a>
+                      <a href="javascript(0);" title="法华寺" target="_self">法华寺</a>
+                      <a href="javascript(0);" title="万柳" target="_self">万柳</a>
+                      <a href="javascript(0);" title="苏州街" target="_self">苏州街</a>
+                      <a href="javascript(0);" title="万泉河" target="_self">万泉河</a>
+                      <a href="/beijing/landmark_187546-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="天宁寺"
+                        target="_self">天宁寺</a>
+                      <a href="/beijing/landmark_150914-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="体育馆路"
+                        target="_self">体育馆路</a>
+                      <a href="/beijing/landmark_187494-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="新世界"
+                        target="_self">新世界</a>
+                      <a href="/beijing/landmark_150833-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="广安门"
+                        target="_self">广安门</a>
+                      <a href="/beijing/landmark_150792-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="磁器口"
+                        target="_self">磁器口</a>
+                      <a href="/beijing/landmark_150809-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="广外大街"
+                        target="_self">广外大街</a>
+                      <a href="/beijing/landmark_150904-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="红莲"
+                        target="_self">红莲</a>
+                      <a href="/beijing/landmark_150880-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="花市"
+                        target="_self">花市</a>
+                      <a href="/beijing/landmark_150810-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="复兴门"
+                        target="_self">复兴门</a>
+                      <a href="/beijing/landmark_187500-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="双安"
+                        target="_self">双安</a>
+                      <a href="/beijing/landmark_150874-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="马连道"
+                        target="_self">马连道</a>
+                      <a href="/beijing/landmark_150929-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="西便门"
+                        target="_self">西便门</a>
+
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_2634-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京站"
+                        target="_self">北京站</a>
+                      <a href="/beijing/landmark_2637-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京东站"
+                        target="_self">北京东站</a>
+                      <a href="/beijing/landmark_2635-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站"
+                        target="_self">北京西站</a>
+                      <a href="/beijing/landmark_2636-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京北站"
+                        target="_self">北京北站</a>
+                      <a href="/beijing/landmark_2638-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京南站"
+                        target="_self">北京南站</a>
+                      <a href="/beijing/landmark_1371265-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="南口站(南出站口)"
+                        target="_self">南口站(南出站口)</a>
+                      <a href="/beijing/landmark_1212402-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京北站(南进站口)"
+                        target="_self">北京北站(南进站口)</a>
+                      <a href="/beijing/landmark_1183768-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京北站售票厅"
+                        target="_self">北京北站售票厅</a>
+                      <a href="/beijing/landmark_1183767-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站9站台"
+                        target="_self">北京西站9站台</a>
+                      <a href="/beijing/landmark_1183766-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站10站台"
+                        target="_self">北京西站10站台</a>
+                      <a href="/beijing/landmark_1183765-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站3站台"
+                        target="_self">北京西站3站台</a>
+                      <a href="/beijing/landmark_1183764-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站4站台"
+                        target="_self">北京西站4站台</a>
+                      <a href="/beijing/landmark_1183763-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站5站台"
+                        target="_self">北京西站5站台</a>
+                      <a href="/beijing/landmark_1183762-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站6站台"
+                        target="_self">北京西站6站台</a>
+                      <a href="/beijing/landmark_1183761-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站7站台"
+                        target="_self">北京西站7站台</a>
+                      <a href="/beijing/landmark_1183760-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站8站台"
+                        target="_self">北京西站8站台</a>
+                      <a href="/beijing/landmark_1183759-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站1站台"
+                        target="_self">北京西站1站台</a>
+                      <a href="/beijing/landmark_1183758-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站2站台"
+                        target="_self">北京西站2站台</a>
+                      <a href="/beijing/landmark_1183757-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="八达岭站(西南进站口)"
+                        target="_self">八达岭站(西南进站口)</a>
+                      <a href="/beijing/landmark_1183756-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站3候车室"
+                        target="_self">北京西站3候车室</a>
+                      <a href="/beijing/landmark_1183755-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="13候车室计时休息厅(北京西站)"
+                        target="_self">13候车室计时休息厅(北京西站)</a>
+                      <a href="/beijing/landmark_1183754-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站10候车室"
+                        target="_self">北京西站10候车室</a>
+                      <a href="/beijing/landmark_1183753-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站11候车室"
+                        target="_self">北京西站11候车室</a>
+                      <a href="/beijing/landmark_1183752-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站2母婴候车室"
+                        target="_self">北京西站2母婴候车室</a>
+                      <a href="/beijing/landmark_1183751-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站4候车室"
+                        target="_self">北京西站4候车室</a>
+                      <a href="/beijing/landmark_1183750-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站1软席候车室"
+                        target="_self">北京西站1软席候车室</a>
+                      <a href="/beijing/landmark_1183749-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站5候车室"
+                        target="_self">北京西站5候车室</a>
+                      <a href="/beijing/landmark_1183748-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站6候车室"
+                        target="_self">北京西站6候车室</a>
+                      <a href="/beijing/landmark_1183747-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站7候车室"
+                        target="_self">北京西站7候车室</a>
+                      <a href="/beijing/landmark_1183746-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京西站8候车室"
+                        target="_self">北京西站8候车室</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_2147-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京语言大学"
+                        target="_self">北京语言大学</a>
+                      <a href="/beijing/landmark_2155-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="首都体育学院"
+                        target="_self">首都体育学院</a>
+                      <a href="/beijing/landmark_2162-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中国青年政治学院"
+                        target="_self">中国青年政治学院</a>
+                      <a href="/beijing/landmark_2141-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京舞蹈学院"
+                        target="_self">北京舞蹈学院</a>
+                      <a href="/beijing/landmark_2167-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中国音乐学院"
+                        target="_self">中国音乐学院</a>
+                      <a href="/beijing/landmark_2171-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中央美术学院"
+                        target="_self">中央美术学院</a>
+                      <a href="/beijing/landmark_2130-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京建筑工程学院"
+                        target="_self">北京建筑工程学院</a>
+                      <a href="/beijing/landmark_2158-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="外交学院"
+                        target="_self">外交学院</a>
+                      <a href="/beijing/landmark_2136-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京农学院"
+                        target="_self">北京农学院</a>
+                      <a href="/beijing/landmark_2125-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京服装学院"
+                        target="_self">北京服装学院</a>
+                      <a href="/beijing/landmark_2169-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中华女子学院"
+                        target="_self">中华女子学院</a>
+                      <a href="/beijing/landmark_2124-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京电子科技学院"
+                        target="_self">北京电子科技学院</a>
+                      <a href="/beijing/landmark_2166-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中国戏曲学院"
+                        target="_self">中国戏曲学院</a>
+                      <a href="/beijing/landmark_2154-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="首都师范大学"
+                        target="_self">首都师范大学</a>
+                      <a href="/beijing/landmark_2157-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="首钢工学院"
+                        target="_self">首钢工学院</a>
+                      <a href="/beijing/landmark_2145-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京印刷学院"
+                        target="_self">北京印刷学院</a>
+                      <a href="/beijing/landmark_2138-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京石油化工学院"
+                        target="_self">北京石油化工学院</a>
+                      <a href="/beijing/landmark_2160-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中国劳动关系学院"
+                        target="_self">中国劳动关系学院</a>
+                      <a href="/beijing/landmark_2126-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京工商大学"
+                        target="_self">北京工商大学</a>
+                      <a href="/beijing/landmark_2150-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="国际关系学院"
+                        target="_self">国际关系学院</a>
+                      <a href="/beijing/landmark_1126900-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="央美大观艺术培训（北京）有限公司"
+                        target="_self">央美大观艺术培训（北京）有限公司</a>
+                      <a href="/beijing/landmark_1126899-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="艺沁烹饪学校"
+                        target="_self">艺沁烹饪学校</a>
+                      <a href="/beijing/landmark_1126898-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京市朝阳师范学校附属小学"
+                        target="_self">北京市朝阳师范学校附属小学</a>
+                      <a href="/beijing/landmark_1126895-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京农业大学附属中学"
+                        target="_self">北京农业大学附属中学</a>
+                      <a href="/beijing/landmark_1126893-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="财贸干校"
+                        target="_self">财贸干校</a>
+                      <a href="/beijing/landmark_1126880-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="首都经济贸易大学西校区"
+                        target="_self">首都经济贸易大学西校区</a>
+                      <a href="/beijing/landmark_1126877-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京市西城建业培训学校"
+                        target="_self">北京市西城建业培训学校</a>
+                      <a href="/beijing/landmark_1126869-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="龙文总部安定门教学中心"
+                        target="_self">龙文总部安定门教学中心</a>
+                      <a href="/beijing/landmark_1126845-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京王府教育培训学校(旁门)"
+                        target="_self">北京王府教育培训学校(旁门)</a>
+                      <a href="/beijing/landmark_1126775-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="旭博外语培训学校"
+                        target="_self">旭博外语培训学校</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_26288-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="顺迈金钻国际商务中心"
+                        target="_self">顺迈金钻国际商务中心</a>
+                      <a href="/beijing/landmark_26422-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="垂杨大厦"
+                        target="_self">垂杨大厦</a>
+                      <a href="/beijing/landmark_26022-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="京粮大厦"
+                        target="_self">京粮大厦</a>
+                      <a href="/beijing/landmark_25725-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="建外SOHO西区"
+                        target="_self">建外SOHO西区</a>
+                      <a href="/beijing/landmark_26195-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="东环国际大厦"
+                        target="_self">东环国际大厦</a>
+                      <a href="/beijing/landmark_26037-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="艾维克大厦"
+                        target="_self">艾维克大厦</a>
+                      <a href="/beijing/landmark_26101-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="瑞赛大厦"
+                        target="_self">瑞赛大厦</a>
+                      <a href="/beijing/landmark_25826-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="京汇大厦"
+                        target="_self">京汇大厦</a>
+                      <a href="/beijing/landmark_25717-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京银泰中心"
+                        target="_self">北京银泰中心</a>
+                      <a href="/beijing/landmark_26168-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中环世贸中心"
+                        target="_self">中环世贸中心</a>
+                      <a href="/beijing/landmark_25763-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="SK大厦"
+                        target="_self">SK大厦</a>
+                      <a href="/beijing/landmark_26063-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="通用国际中心"
+                        target="_self">通用国际中心</a>
+                      <a href="/beijing/landmark_26045-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="米阳大厦"
+                        target="_self">米阳大厦</a>
+                      <a href="/beijing/landmark_25730-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="招商局大厦"
+                        target="_self">招商局大厦</a>
+                      <a href="/beijing/landmark_26175-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="海文大厦"
+                        target="_self">海文大厦</a>
+                      <a href="/beijing/landmark_25954-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="华腾大厦"
+                        target="_self">华腾大厦</a>
+                      <a href="/beijing/landmark_25908-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="华腾北塘商务大厦"
+                        target="_self">华腾北塘商务大厦</a>
+                      <a href="/beijing/landmark_25895-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="劲松大厦"
+                        target="_self">劲松大厦</a>
+                      <a href="/beijing/landmark_25873-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="新东方中航工业大厦"
+                        target="_self">新东方中航工业大厦</a>
+                      <a href="/beijing/landmark_26158-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="冠城名敦道"
+                        target="_self">冠城名敦道</a>
+                      <a href="/beijing/landmark_26042-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中服大厦"
+                        target="_self">中服大厦</a>
+                      <a href="/beijing/landmark_26120-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="旭捷大厦"
+                        target="_self">旭捷大厦</a>
+                      <a href="/beijing/landmark_26279-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="国贸西楼"
+                        target="_self">国贸西楼</a>
+                      <a href="/beijing/landmark_26229-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="竭诚商务楼"
+                        target="_self">竭诚商务楼</a>
+                      <a href="/beijing/landmark_26159-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="雍贵中心"
+                        target="_self">雍贵中心</a>
+                      <a href="/beijing/landmark_26311-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="双子座大厦东塔"
+                        target="_self">双子座大厦东塔</a>
+                      <a href="/beijing/landmark_26210-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="湖南大厦"
+                        target="_self">湖南大厦</a>
+                      <a href="/beijing/landmark_26078-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="和盛大厦"
+                        target="_self">和盛大厦</a>
+                      <a href="/beijing/landmark_26298-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="汇豪阁公寓"
+                        target="_self">汇豪阁公寓</a>
+                      <a href="/beijing/landmark_26043-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="华丽大厦"
+                        target="_self">华丽大厦</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_3487-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="孔庙和国子监博物馆"
+                        target="_self">孔庙和国子监博物馆</a>
+                      <a href="/beijing/landmark_3466-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="秀水街"
+                        target="_self">秀水街</a>
+                      <a href="/beijing/landmark_3483-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="南池子"
+                        target="_self">南池子</a>
+                      <a href="/beijing/landmark_3468-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="世贸天阶"
+                        target="_self">世贸天阶</a>
+                      <a href="/beijing/landmark_3463-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中华世纪坛"
+                        target="_self">中华世纪坛</a>
+                      <a href="/beijing/landmark_3448-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="前门大街"
+                        target="_self">前门大街</a>
+                      <a href="/beijing/landmark_3477-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="劳动人民文化宫"
+                        target="_self">劳动人民文化宫</a>
+                      <a href="/beijing/landmark_3482-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="海淀公园"
+                        target="_self">海淀公园</a>
+                      <a href="/beijing/landmark_3441-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="故宫博物院"
+                        target="_self">故宫博物院</a>
+                      <a href="/beijing/landmark_3451-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京动物园"
+                        target="_self">北京动物园</a>
+                      <a href="/beijing/landmark_3476-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="国家图书馆"
+                        target="_self">国家图书馆</a>
+                      <a href="/beijing/landmark_3467-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京大观园"
+                        target="_self">北京大观园</a>
+                      <a href="/beijing/landmark_3488-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="月坛公园"
+                        target="_self">月坛公园</a>
+                      <a href="/beijing/landmark_3453-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="景山公园"
+                        target="_self">景山公园</a>
+                      <a href="/beijing/landmark_3462-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="地坛公园"
+                        target="_self">地坛公园</a>
+                      <a href="/beijing/landmark_3480-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="玉渊潭公园"
+                        target="_self">玉渊潭公园</a>
+                      <a href="/beijing/landmark_3469-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中央广播电视塔"
+                        target="_self">中央广播电视塔</a>
+                      <a href="/beijing/landmark_3484-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="石景山游乐园"
+                        target="_self">石景山游乐园</a>
+                      <a href="/beijing/landmark_1213448-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="天安门-城楼"
+                        target="_self">天安门-城楼</a>
+                      <a href="/beijing/landmark_1126892-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="东亚奥北中心"
+                        target="_self">东亚奥北中心</a>
+                      <a href="/beijing/landmark_1126888-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="瑞光胡同"
+                        target="_self">瑞光胡同</a>
+                      <a href="/beijing/landmark_1126881-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="校尉胡同"
+                        target="_self">校尉胡同</a>
+                      <a href="/beijing/landmark_1126876-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="五泉山公园"
+                        target="_self">五泉山公园</a>
+                      <a href="/beijing/landmark_1126874-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="保全顺生态农庄"
+                        target="_self">保全顺生态农庄</a>
+                      <a href="/beijing/landmark_1126864-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="明辨楼"
+                        target="_self">明辨楼</a>
+                      <a href="/beijing/landmark_1126838-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="8哩岛"
+                        target="_self">8哩岛</a>
+                      <a href="/beijing/landmark_1126809-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="仙人洞"
+                        target="_self">仙人洞</a>
+                      <a href="/beijing/landmark_1126801-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="丰盛胡同"
+                        target="_self">丰盛胡同</a>
+                      <a href="/beijing/landmark_1126795-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="美景东方"
+                        target="_self">美景东方</a>
+                      <a href="/beijing/landmark_1126794-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="燕山水泥厂"
+                        target="_self">燕山水泥厂</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_2747-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="首都儿科研究所附属儿童医院"
+                        target="_self">首都儿科研究所附属儿童医院</a>
+                      <a href="/beijing/landmark_2743-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京协和医院"
+                        target="_self">北京协和医院</a>
+                      <a href="/beijing/landmark_2757-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="世纪坛医院"
+                        target="_self">世纪坛医院</a>
+                      <a href="/beijing/landmark_2749-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京医院"
+                        target="_self">北京医院</a>
+                      <a href="/beijing/landmark_2740-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京天坛医院"
+                        target="_self">北京天坛医院</a>
+                      <a href="/beijing/landmark_2746-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京儿童医院"
+                        target="_self">北京儿童医院</a>
+                      <a href="/beijing/landmark_2750-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="武警总医院"
+                        target="_self">武警总医院</a>
+                      <a href="/beijing/landmark_2739-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京华大肾安医院"
+                        target="_self">北京华大肾安医院</a>
+                      <a href="/beijing/landmark_2764-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北医三院"
+                        target="_self">北医三院</a>
+                      <a href="/beijing/landmark_2759-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="西苑医院"
+                        target="_self">西苑医院</a>
+                      <a href="/beijing/landmark_2753-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="望京医院"
+                        target="_self">望京医院</a>
+                      <a href="/beijing/landmark_2763-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="东直门医院"
+                        target="_self">东直门医院</a>
+                      <a href="/beijing/landmark_2737-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="空军总医院"
+                        target="_self">空军总医院</a>
+                      <a href="/beijing/landmark_2758-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京肿瘤医院"
+                        target="_self">北京肿瘤医院</a>
+                      <a href="/beijing/landmark_2766-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="武警北京总队医院"
+                        target="_self">武警北京总队医院</a>
+                      <a href="/beijing/landmark_2754-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京安定医院"
+                        target="_self">北京安定医院</a>
+                      <a href="/beijing/landmark_2738-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="宣武医院"
+                        target="_self">宣武医院</a>
+                      <a href="/beijing/landmark_2742-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="阜外医院"
+                        target="_self">阜外医院</a>
+                      <a href="/beijing/landmark_2745-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京中医医院"
+                        target="_self">北京中医医院</a>
+                      <a href="/beijing/landmark_2760-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="航天中心医院"
+                        target="_self">航天中心医院</a>
+                      <a href="/beijing/landmark_2761-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="佑安医院"
+                        target="_self">佑安医院</a>
+                      <a href="/beijing/landmark_2741-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="海军总医院"
+                        target="_self">海军总医院</a>
+                      <a href="/beijing/landmark_1126902-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京宣武医院集团中心医院"
+                        target="_self">北京宣武医院集团中心医院</a>
+                      <a href="/beijing/landmark_1126894-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中日医院"
+                        target="_self">中日医院</a>
+                      <a href="/beijing/landmark_1126886-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京武警医院"
+                        target="_self">北京武警医院</a>
+                      <a href="/beijing/landmark_1126883-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="大兴妇幼保健站(兴丰大街分院)"
+                        target="_self">大兴妇幼保健站(兴丰大街分院)</a>
+                      <a href="/beijing/landmark_1126878-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京城建第四医院"
+                        target="_self">北京城建第四医院</a>
+                      <a href="/beijing/landmark_1126866-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="斯迈尔齿科"
+                        target="_self">斯迈尔齿科</a>
+                      <a href="/beijing/landmark_1126854-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京市眼科研究所"
+                        target="_self">北京市眼科研究所</a>
+                      <a href="/beijing/landmark_1126832-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京嘉悦眼科门诊部有限公司"
+                        target="_self">北京嘉悦眼科门诊部有限公司</a>
+                    </div>
+                    <div class="w_listectnone" style="display: none;">
+                      <a href="/beijing/landmark_26787-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="胜利联盟五人足球中心"
+                        target="_self">胜利联盟五人足球中心</a>
+                      <a href="/beijing/landmark_26520-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="天地人运动馆"
+                        target="_self">天地人运动馆</a>
+                      <a href="/beijing/landmark_27117-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="CBD体育文化广场"
+                        target="_self">CBD体育文化广场</a>
+                      <a href="/beijing/landmark_26874-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="小帅台球厅"
+                        target="_self">小帅台球厅</a>
+                      <a href="/beijing/landmark_26694-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="九度谷台球俱乐部"
+                        target="_self">九度谷台球俱乐部</a>
+                      <a href="/beijing/landmark_26970-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="婴乐士婴幼儿游泳馆"
+                        target="_self">婴乐士婴幼儿游泳馆</a>
+                      <a href="/beijing/landmark_27091-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="小龙人棒球俱乐部"
+                        target="_self">小龙人棒球俱乐部</a>
+                      <a href="/beijing/landmark_26580-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="豪门中天"
+                        target="_self">豪门中天</a>
+                      <a href="/beijing/landmark_27215-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="云川台球厅"
+                        target="_self">云川台球厅</a>
+                      <a href="/beijing/landmark_26654-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中国大饭店游泳池"
+                        target="_self">中国大饭店游泳池</a>
+                      <a href="/beijing/landmark_27083-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="广西大厦游泳馆"
+                        target="_self">广西大厦游泳馆</a>
+                      <a href="/beijing/landmark_26540-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="中关村体育场"
+                        target="_self">中关村体育场</a>
+                      <a href="/beijing/landmark_26697-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="三星缘台球厅"
+                        target="_self">三星缘台球厅</a>
+                      <a href="/beijing/landmark_26602-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="塞特俱乐部保龄球馆"
+                        target="_self">塞特俱乐部保龄球馆</a>
+                      <a href="/beijing/landmark_26614-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="阿波罗娱乐宫保龄球馆"
+                        target="_self">阿波罗娱乐宫保龄球馆</a>
+                      <a href="/beijing/landmark_26917-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京人民大学篮球场"
+                        target="_self">北京人民大学篮球场</a>
+                      <a href="/beijing/landmark_26713-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="友谊宾馆网球场"
+                        target="_self">友谊宾馆网球场</a>
+                      <a href="/beijing/landmark_27226-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="金假日台球城"
+                        target="_self">金假日台球城</a>
+                      <a href="/beijing/landmark_26660-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="京城水系麦钟桥游泳场"
+                        target="_self">京城水系麦钟桥游泳场</a>
+                      <a href="/beijing/landmark_26845-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="海翰银岸桌球俱乐部"
+                        target="_self">海翰银岸桌球俱乐部</a>
+                      <a href="/beijing/landmark_27115-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="京瑞大厦-游泳池"
+                        target="_self">京瑞大厦-游泳池</a>
+                      <a href="/beijing/landmark_26833-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="华盛堂跆拳道"
+                        target="_self">华盛堂跆拳道</a>
+                      <a href="/beijing/landmark_26729-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="京体游泳馆"
+                        target="_self">京体游泳馆</a>
+                      <a href="/beijing/landmark_26665-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="伯爵园高尔夫俱乐部(京瑞大厦店)"
+                        target="_self">伯爵园高尔夫俱乐部(京瑞大厦店)</a>
+                      <a href="/beijing/landmark_26645-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="深圳大厦游泳馆"
+                        target="_self">深圳大厦游泳馆</a>
+                      <a href="/beijing/landmark_26689-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="长城岭滑雪场北京办事处"
+                        target="_self">长城岭滑雪场北京办事处</a>
+                      <a href="/beijing/landmark_26560-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="撞击之都台球俱乐部"
+                        target="_self">撞击之都台球俱乐部</a>
+                      <a href="/beijing/landmark_26517-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="北京体育馆"
+                        target="_self">北京体育馆</a>
+                      <a href="/beijing/landmark_26896-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="锦上国际公寓保龄球馆"
+                        target="_self">锦上国际公寓保龄球馆</a>
+                      <a href="/beijing/landmark_27018-0-0-0-0-0-0-0-1.html?tn=mn19091015" title="东方启明星篮球"
+                        target="_self">东方启明星篮球</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix czc_000000049">
+                <div class="s_mn_screenqy">
+                  <div class="s_mn_screen_tit">房屋类型：</div>
+                  <div class="s_mn_screenlist">
+                    <span class="w_listspan3">
+                      <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限" target="_self">不限</a></span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-23-0-0-0-1.html?tn=mn19091015" title="别墅套间">
+                        别墅套间
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-9-0-0-0-1.html?tn=mn19091015" title="四合院">
+                        四合院
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-26-0-0-0-1.html?tn=mn19091015" title="房车露营车">
+                        房车露营车
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-12-0-0-0-1.html?tn=mn19091015" title="农家乐">
+                        农家乐
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-7-0-0-0-1.html?tn=mn19091015" title="独栋别墅">
+                        独栋别墅
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-1-0-0-0-1.html?tn=mn19091015" title="小区住宅">
+                        小区住宅
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-24-0-0-0-1.html?tn=mn19091015" title="叠拼别墅">
+                        叠拼别墅
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-18-0-0-0-1.html?tn=mn19091015" title="酒店式公寓">
+                        酒店式公寓
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-4-0-0-0-1.html?tn=mn19091015" title="普通公寓">
+                        普通公寓
+                      </a>
+                    </span>
+                    <span class="w_listspan3" style="margin-left:99px;">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-19-0-0-0-1.html?tn=mn19091015" title="小区复式跃层">
+                        小区复式跃层
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-22-0-0-0-1.html?tn=mn19091015" title="联排别墅">
+                        联排别墅
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-16-0-0-0-1.html?tn=mn19091015" title="其它">
+                        其它
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-2-0-0-0-1.html?tn=mn19091015" title="客栈民宿">
+                        客栈民宿
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-17-0-0-0-1.html?tn=mn19091015" title="Loft公寓">
+                        Loft公寓
+                      </a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="/beijing/null-0-0-0-20-0-0-0-1.html?tn=mn19091015" title="自建住宅">
+                        自建住宅
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix czc_000000050">
+                <div class="s_mn_screenqy">
+                  <div class="s_mn_screen_tit">出租类型：</div>
+                  <div class="s_mn_screenlist">
+                    <div class="w_searchprice_l">
+                      <span class="w_listspan3">
+                        <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限" target=" _self">不限</a>
+                      </span>
+
+                      <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-1-0-0-0-0-0-0-1.html?tn=mn19091015" title="0-100元">
+                          0-100元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-2-0-0-0-0-0-0-1.html?tn=mn19091015" title="101-200元">
+                          101-200元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-3-0-0-0-0-0-0-1.html?tn=mn19091015" title="201-300元">
+                          201-300元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-4-0-0-0-0-0-0-1.html?tn=mn19091015" title="301-400元">
+                          301-400元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-5-0-0-0-0-0-0-1.html?tn=mn19091015" title="401-500元">
+                          401-500元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-6-0-0-0-0-0-0-1.html?tn=mn19091015" title="501-800元">
+                          501-800元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-7-0-0-0-0-0-0-1.html?tn=mn19091015" title="801-1000元">
+                          801-1000元
+                        </a>
+                      </span> <span class="w_listspan3">
+                        <a rel="nofollow" href="/beijing/null-8-0-0-0-0-0-0-1.html?tn=mn19091015" title="1000元以上">
+                          1000元以上
+                        </a>
+                      </span>
+                    </div>
+                    <div class="s_mn_custom"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="clearfix czc_000000051">
+                <div class="s_mn_screenqy">
+                  <div class="s_mn_screen_tit">出租类型：</div>
+                  <div class="s_mn_screenlist">
+
+                    <span class="w_listspan3">
+
+
+
+                      <a href="java>script:void(0);" class="s_mn_screen_aover" title="不限" rel="nofollow"
+                        target="_self">不限</a>
+                    </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="整租">
+                        整租
+                      </a>
+                    </span> <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="单间出租">
+                        单间出租
+                      </a>
+                    </span></div>
+                </div>
+              </li>
+              <li class="clearfix w_select_border czc_000000052">
+                <div class="s_mn_screenqy">
+                  <div class="s_mn_screen_tit">房间户型：</div>
+                  <div class="s_mn_screenlist" data-family="0">
+                    <span class="w_listspan3">
+                      <a href="javascript:void(0);" class="s_mn_screen_aover" title="不限" rel="nofollow"
+                        target="_self">不限</a> </span>
+                    <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="一室">
+                        一室
+                      </a>
+                    </span> <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="二室">
+                        二室
+                      </a>
+                    </span> <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="三室">
+                        三室
+                      </a>
+                    </span> <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="四室">
+                        四室
+                      </a>
+                    </span> <span class="w_listspan3">
+                      <a rel="nofollow" href="javascript:void(0);" title="四室以上">
+                        四室以上
+                      </a>
+                    </span> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 第二部分 -->
+  <div class="s_mn_mainbox">
+    <!-- 房源 -->
+    <div class="s_mn_center clearfix">
+      <div class="s_mn_article">
+        <div class="s_mn_detailsList_condition">
+          <div class="s_mn_ranking">
+            <a href="javascript:void(0);" class="descen_icon_over" title="默认排序">默认</a>|
+            <a href="/beijing/null-0-0-0-0-0-5-0-1.html?tn=mn19091015" rel="nofollow" class="descen_icon"
+              title="销量排序">销量</a> |
+
+            <a href="/beijing/null-0-0-0-0-0-2-0-1.html?tn=mn19091015" rel="nofollow" class="ascend_icon"
+              title="价格排序">价格</a> |
+            <a href="/beijing/null-0-0-0-0-0-8-0-1.html?tn=mn19091015" rel="nofollow" class="ascend_icon"
+              title="人气排序">人气</a>|
+            <a href="/beijing/null-0-0-0-0-0-4-0-1.html?tn=mn19091015" rel="nofollow" class="ascend_icon"
+              title="时间排序">最新</a>|
+            <a href="/beijing/null-0-0-0-0-0-6-0-1.html?tn=mn19091015" rel="nofollow" class="ascend_icon"
+              title="评价数量排序">评价</a>
+          </div>
+          <div class="s_mn_search_navtag">
+            <a href="http://www.muniao.com" title="木鸟短租网" target="_self">木鸟短租网</a>
+            <span>&gt;</span>&nbsp;<a href="/beijing/" title="北京短租房" target="_self">北京短租房</a>
+
+            &nbsp;-&nbsp;为您找到北京短租房
+            <span class="s_red">34510套</span>
+          </div>
+        </div>
+        <ul class="s_mn_detailslist clearfix" id="Lmain_con">
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <div class="s_mn_house_images">
+                <div>
+                  <a href="javascript:void(0);">
+                    <img src="http://127.0.0.1:5050/search/show1.webp" alt="" class="ckwebp2">
+                  </a>
+                </div>
+                <a href="javascript:void(0);" class="s_mn_house_like like_icon2"></a>
+                <div class="list_score">
+                  <div class="score_bg"></div>
+                  <div class="tmc">
+                    <span>5.0</span>
+                    /评分
+                  </div>
+                </div>
+              </div>
+              <!-- 房源详情 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="javascript:void(0);" class="s_mn_house_t1">侣行民宿 八达岭长城世园会附近独栋美式+北欧叠拼别墅6室2厅2厨4卫</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>6室</span>|<span>整租</span>|<span>宜住12人</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：八达岭镇东曹营村路东一巷18号
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥2499</span>
+                      /晚
+                    </div>
+                    <div class="s_mn_house_salebox">
+                      <i class="list_sale_icon"></i>
+                      <em>月租6.0折</em>
+                      <em>周租8.0折</em>
+                      <em>08-30~10-31</em>
+                    </div>
+                    <div class="near_reserve">
+
+                      近期预订
+                      <span>40 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">34</span>
+                          <p class="list_picnum">房间图片</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);" class="s_mn_detailslist_map map_icon">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情 右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(0);">
+                        <img src="http://127.0.0.1:5050/search/avatr1.webp" alt="">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a href="javascript:void(0);">“侣行”民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none">
+                        <i class="shenfen_icon"></i>
+                        身份验证
+                        <i class="true_icon"></i>
+                      </li>
+                      <li class="list_zhitip">
+                        <i class="zhima_icon"></i>
+                        <a href="">信用较好</a>
+                        <i class="true_icon" style="display:none;"></i>
+                        <div class="list_zhimatip" style="display: none">
+                          芝麻信用是面向社会的信用服务体系，依据方方面面的信息，运用大数据及云计算技术客观呈现个人的信用状况，通过连接各种服务，让每个人都能体验信用所带来的价值。
+                        </div>
+                      </li>
+                      <li class="list_zhitip">
+
+                        <a href="javascript:void(0);" style="color:#ff998f">地主</a>
+                        <i></i>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="phone-ewm" style="display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" alt="" width="116px" height="116px">
+                    <p class="phone-ewm-info">
+                      微信扫码
+                      <br>
+                      点击联系房东
+                    </p>
+
+                  </div>
+                  <div class="weblt">
+                    <a href="javascript:void(0);">拨打电话</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="Lcon1">
+            <div class="s_mn_housebox">
+              <!-- 左边 房源图片 -->
+              <div class="s_mn_house_images">
+                <div class="s_mn_house_img">
+                  <a href="">
+                    <img src="http://127.0.0.1:5050/search/show2.webp" alt="">
+                  </a>
+                  <span class="smfy_icon"></span>
+                </div>
+                <a href="" class="s_mn_house_like like_icon2 colle_list"></a>
+                <div class="list_score"></div>
+              </div>
+              <!-- 右边 房源介绍 -->
+              <div class="s_mn_house_details clearfix">
+                <div class="house_details_l">
+                  <div class="s_mn_house_tit">
+                    <a href="" class="s_mn_house_t1">通州北关 民宿居家风 短租公寓</a>
+                  </div>
+                  <div class="s_mn_house_introduction">
+                    <p>
+                      <span>1室</span>|<span>整租</span>|<span>宜住3人</span>
+
+                      <a>|</a><span>15 条评论</span>
+                    </p>
+                    <div class="list_address">
+                      <i class="address_icon"></i>
+                      地址：北关路14号
+
+                    </div>
+                    <div class="s_mn_house_price2">
+                      <span>￥448</span>
+                      /晚
+                    </div>
+                    <div class="near_reserve">
+                      近期预订
+                      <span>26 晚</span>
+                    </div>
+                  </div>
+                  <div class="s_mn_house_information">
+                    <div class="hr"></div>
+                    <dl class="czc_000000053">
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="comment_icon">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_recommend">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd>
+                          <span class="comment_num">15</span>
+                          <p class="list_picnum ">评论数</p>
+                        </dd>
+                      </a>
+                    </dl>
+                    <dl>
+                      <a href="javascript:void(0);">
+                        <dd class="map_wz">
+                          <i class="list_seemap"></i>
+                          地图位置
+                        </dd>
+                      </a>
+                    </dl>
+                  </div>
+                </div>
+                <!-- 列表详情右边 -->
+                <div class="house_details_r">
+                  <div class="s_mn_landlord_information">
+                    <div class="s_mn_landlordpic2">
+                      <a href="javascript:void(void);" rel="nofollow" target="_blank">
+                        <img class="ckwebp2" src="http://127.0.0.1:5050/search/avatr2.webp" width="24" height="24" title="遇见民宿">
+                      </a>
+                    </div>
+                    <div class="s_mn_landlordname2">
+                      <a rel="nofollow" href="javascript:void(0);" target="_blank">遇见民宿</a>
+                    </div>
+                    <ul class="landlordmark">
+                      <li style="display: none;">
+                        <i class="shenfen_icon"></i>身份验证<i class="true_icon"></i>
+                      </li>
+                      <!---->
+                    </ul>
+                  </div>
+                  <div class="phone-ewm"
+                    style="text-align: center; padding: 15px 0px; background: rgb(255, 255, 255); width: 100%; position: absolute; z-index: 10; border-top: 1px solid rgb(204, 204, 204); bottom: 40px; display: none;">
+                    <img src="http://127.0.0.1:5050/search/下载.gif" id="phone-ewm-137133" width="116" height="116">
+                    <p class="phone-ewm-info" style="font-size:12px;color:#ff9180;margin:0 22px;">微信扫码<br>点击联系房东</p>
+                  </div>
+
+                  <div class="weblt">
+                    <a class="webim-chatbtns" data-id="915054" data-title="通州北关 民宿居家风 短租公寓"
+                      data-image="//assets.muniao.com/UploadFiles/thumb/image/20190317/d437eb505702448da0db812ade8cd69420190317220549525.jpg_414_262.jpg"
+                      data-priceday="448" data-privacy="整租" data-propertytype="公寓" data-accommodates="宜住3人"
+                      rel="nofollow" title="拨打电话" target="_self">拨打电话<span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="page_city">
+          <a href="">北京短租房</a>
+          -找到相关房源34426个，每页30个结果
+        </div>
+        <div class="s_mn_page_bar">
+          <a href="javascript:void(0);">第一页</a>
+          <a href="javascript:void(0);" style="background:#ff6c5c;color:#fff;border:1px solid #e46355;">1</a>
+          <a href="javascript:void(0);">2</a>
+          <a href="javascript:void(0);">3</a>
+          <a href="javascript:void(0);">4</a>
+          <a href="javascript:void(0);">5</a>
+          <a href="javascript:void(0);">6</a>
+          <a href="javascript:void(0);">下一页</a>
+          <a href="javascript:void(0);">最后一页</a>
+        </div>
+        <hr>
+      </div>
+      <!-- 右边房源推荐 -->
+      <div class="s_mn_sidebar">
+        <div class="w_listbz">
+          <div class="w_listbzicon">
+            <a href="">
+              <img src="http://127.0.0.1:5050/search/bz_bigicon.jpg" alt="">
+            </a>
+          </div>
+          <ul id="w_listbzul" class="w_listbzul f14">
+            <li>
+              <span>房源100%实地验证</span>
+              <div class="w_listbztip f12"></div>
+            </li>
+            <li>
+              <span>付款到木鸟 资金有保障</span>
+              <div class="w_listbztip f12"></div>
+            </li>
+            <li>
+              <span>保障入住人身安全</span>
+              <div class="w_listbztip f12"></div>
+            </li>
+            <li>
+              <span>地主之谊出行无忧</span>
+              <div class="w_listbztip f12"></div>
+            </li>
+          </ul>
+        </div>
+        <ul class="roomList-newAdd">
+          <li><img src="//assets.muniao.com/assets2/pc/Content/images/list_safeIcon.png" alt="安全">10万出行意外险<br>身份证信息互联网核查
+          </li>
+          <li><img src="//assets.muniao.com/assets2/pc/Content/images/list_serverIcon.png"
+              alt="服务">2623位试睡体验师<br>90万房源实拍验真</li>
+          <li class="roomList-newAdd-last"><img src="//assets.muniao.com/assets2/pc/Content/images/list_clearIcon.png"
+              alt="卫生">被单每客一换（高品质洗漱用品）/酒店及保洁</li>
+        </ul>
+        <div class="w_list_Rtitle">
+          <div class="s_mn_t1">推荐房源</div>
+        </div>
+        <div class="s_mn_recommended_house">
+          <a href="/room/344014.html" title="北京西站 307医院 301  地铁九号线七里庄  鼎恒中心 精装三居" target="_blank" class="s_mn_rec_house"
+            data-id="344014">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/root/room/344014/thumb/2242a8475c2a4ddf91b887faf2f790ed.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/root/room/344014/thumb/2242a8475c2a4ddf91b887faf2f790ed.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥471/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">北京西站 307医院 301 地铁九号线七里庄 鼎恒中心 精装三居</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/300022.html" title="古北水镇舒适二层别墅" target="_blank" class="s_mn_rec_house" data-id="300022">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/root/room/300022/thumb/1235ec5c93314be99e70cd0655706a4f.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/root/room/300022/thumb/1235ec5c93314be99e70cd0655706a4f.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥718/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">古北水镇舒适二层别墅</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/334135.html" title="【西皮民宿】798艺术区、朝阳大悦城周边民宿,在艺术家聚集地邂逅一段过往" target="_blank"
+            class="s_mn_rec_house" data-id="334135">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/thumb/image/20190516/15d6fcb3dd3140d9b23d82d7288cad0120190516110449992.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/thumb/image/20190516/15d6fcb3dd3140d9b23d82d7288cad0120190516110449992.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥175/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">【西皮民宿】798艺术区、朝阳大悦城周边民宿,在艺术家聚集地邂逅一段过往</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/294785.html" title="三里屯南锣鼓巷雍和宫十号线超舒适两居" target="_blank" class="s_mn_rec_house"
+            data-id="294785">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/thumb/image/20190309/7159a97a2c7844d0861be92e4b815b8c20190309162509827.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/thumb/image/20190309/7159a97a2c7844d0861be92e4b815b8c20190309162509827.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥468/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">三里屯南锣鼓巷雍和宫十号线超舒适两居</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/393133.html" title="温馨情侣套房 简单 浪漫" target="_blank" class="s_mn_rec_house" data-id="393133">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/root/room/393133/thumb/19b1cc81d1e04399a610f856caae6aa8.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/root/room/393133/thumb/19b1cc81d1e04399a610f856caae6aa8.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥371/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">温馨情侣套房 简单 浪漫</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/330455.html" title="地铁六号线，直达后海，精装北欧复式，推荐" target="_blank" class="s_mn_rec_house"
+            data-id="330455">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/thumb/image/20190508/614998403929489aa725db5982f4ad9720190508092136700.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/thumb/image/20190508/614998403929489aa725db5982f4ad9720190508092136700.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥299/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">地铁六号线，直达后海，精装北欧复式，推荐</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/335921.html" title="Y1天宫院地铁凯德mall超大投影浪漫房" target="_blank" class="s_mn_rec_house"
+            data-id="335921">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/root/room/335921/thumb/06e993781e9f4bd396e9e8a67d58a457.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/root/room/335921/thumb/06e993781e9f4bd396e9e8a67d58a457.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥328/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">Y1天宫院地铁凯德mall超大投影浪漫房</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/158596.html" title="北京双榆树西 人民清华北大 双安两居" target="_blank" class="s_mn_rec_house"
+            data-id="158596">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/root/room/158596/thumb/1130a94d190441c38e26cc161a36e2f7.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/root/room/158596/thumb/1130a94d190441c38e26cc161a36e2f7.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥788/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">北京双榆树西 人民清华北大 双安两居</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/311015.html" title="I  Like》安静、宜独处美美的睡一觉" target="_blank" class="s_mn_rec_house"
+            data-id="311015">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/thumb/image/20190325/c131b47f54144ac4b1a2e59e85fec75820190325172005141.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/thumb/image/20190325/c131b47f54144ac4b1a2e59e85fec75820190325172005141.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥338/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">I Like》安静、宜独处美美的睡一觉</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+          <a href="/room/347926.html" title="延庆康庄农家院 独立大床房A" target="_blank" class="s_mn_rec_house" data-id="347926">
+            <div class="s_mn_rec_house_pic">
+              <img class="ckwebp2"
+                src="//pics.muniao.com//imagefile/thumb/image/20190610/65f16d091e3940c4b19da3ccab2d1dda20190610110106824.jpg_275_173.jpg?mode=stretch&amp;format=webp"
+                data-original="//pics.muniao.com//UploadFiles/thumb/image/20190610/65f16d091e3940c4b19da3ccab2d1dda20190610110106824.jpg_275_173.jpg"
+                width="209" height="131">
+              <div class="reco_house_price">
+                <span>￥268/晚</span>
+                <div class="score_bg"></div>
+              </div>
+            </div>
+            <div class="s_mn_rec_housetext">
+              <div class="s_mn_rec_housetitle">延庆康庄农家院 独立大床房A</div>
+              <div class="s_mn_rec_houseintroduce"> <span class="s_mn_house_area">室</span>|<span
+                  class="s_mn_house_area"></span>|<span class="s_mn_house_area">可住人</span></div>
+            </div>
+          </a>
+        </div>
+        <div class="s_mn_ad_erweima">
+          <div class="s_mn_title" style="display:none;">
+            <div class="s_mn_t1">
+              移动客户端下载
+            </div>
+          </div>
+          <div class="s_mn_ewm" style="display:none;">
+            <div class="s_mn_smxz"><img src="//assets.muniao.com/assets/2015/images/smxz.jpg"></div>
+          </div>
+          <div class="s_mn_ewm">
+            <div class="s_mn_smxz"><img src="//assets.muniao.com/assets/2015/images/smgz.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 最近浏览 -->
+    <div class="s_mn_recommended_bottom">
+      <div class="s_mn_center2">
+        <div class="s_mn_title">
+          <div class="s_mn_t1">最近浏览</div>
+        </div>
+        <ul class="s_mn_rec_bottom">
+          <li style="display: block">
+            <div class="s_mn_module3x">
+              <div class="s_mn_place3">
+                <div class="s_mn_housingbox3">
+                  <div class="s_mn_housing_img3">
+                    <a href="javascript:void(0);">
+                      <img src="http://127.0.0.1:5050/search/near1.webp" alt="">
+                    </a>
+                  </div>
+                  <div class="s_mn_housing_textbox3">
+                    <div class="s_mn_housing_title3">
+                      <a href="javascript:void(0);" title="十渡紫藤佳苑别墅整栋出租">十渡紫藤佳苑别墅整栋出租</a>
+                    </div>
+                    <div class="s_mn_lates_houseintroduce">
+                      <span class="s_mn_house_area">北京 - 房山区</span>
+                      <span class="s_mn_house_price">￥800/晚</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_mn_module3x">
+              <div class="s_mn_place3">
+                <div class="s_mn_housingbox3">
+                  <div class="s_mn_housing_img3">
+                    <a href="javascript:void(0);">
+                      <img src="http://127.0.0.1:5050/search/near2.webp" alt="">
+                    </a>
+                  </div>
+                  <div class="s_mn_housing_textbox3">
+                    <div class="s_mn_housing_title3">
+                      <a href="javascript:void(0);" title="高教园地铁站附近精致小一居">高教园地铁站附近精致小一居</a>
+                    </div>
+                    <div class="s_mn_lates_houseintroduce">
+                      <span class="s_mn_house_area">北京 - 昌平区</span>
+                      <span class="s_mn_house_price">￥139/晚</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_mn_module3x">
+              <div class="s_mn_place3">
+                <div class="s_mn_housingbox3">
+                  <div class="s_mn_housing_img3">
+                    <a href="javascript:void(0);">
+                      <img src="http://127.0.0.1:5050/search/near3.webp" alt="">
+                    </a>
+                  </div>
+                  <div class="s_mn_housing_textbox3">
+                    <div class="s_mn_housing_title3">
+                      <a href="javascript:void(0);" title="高级大床房 梨园地铁站 ...">高级大床房 梨园地铁站 ...</a>
+                    </div>
+                    <div class="s_mn_lates_houseintroduce">
+                      <span class="s_mn_house_area">北京 - 通州区</span>
+                      <span class="s_mn_house_price">￥168/晚</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s_mn_module3x">
+              <div class="s_mn_place3">
+                <div class="s_mn_housingbox3">
+                  <div class="s_mn_housing_img3">
+                    <a href="javascript:void(0);">
+                      <img src="http://127.0.0.1:5050/search/near4.webp" alt="">
+                    </a>
+                  </div>
+                  <div class="s_mn_housing_textbox3">
+                    <div class="s_mn_housing_title3">
+                      <a href="javascript:void(0);" title="新中式小清新">新中式小清新</a>
+                    </div>
+                    <div class="s_mn_lates_houseintroduce">
+                      <span class="s_mn_house_area">北京 - 怀柔区</span>
+                      <span class="s_mn_house_price">￥2880/晚</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- 脚部 -->
+  <footer id="footer"></footer>
+</div>
+</template>
+<script>
+export default {
+  
+}
+</script>
+<style scoped>
+  @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #555; }
+
+body {
+  background: #f0f0f0; }
+
+.s_mn_mainbox {
+  width: 100%; }
+
+.s_mn_screenbox {
+  width: 100%; }
+
+.s_mn_form {
+  width: 100%; }
+
+.s_mn_center {
+  width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+.s_mn_screen_ipt {
+  width: 1180px;
+  background-color: #fff;
+  margin-top: 7px;
+  border: 1px solid #ddd;
+  padding: 9px 0; }
+  .s_mn_screen_ipt:after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.s_mn_search_place {
+  width: 425px;
+  float: left;
+  height: 40px; }
+
+.s_mn_search_city {
+  width: 110px;
+  position: relative;
+  z-index: 2;
+  float: left;
+  height: 40px; }
+
+.s_mn_city_input {
+  border: none;
+  color: #fe7e71;
+  font: 16px/35px "microsoft yahei";
+  display: block;
+  padding-right: 15px;
+  width: 97px;
+  height: 38px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background: url(//assets.muniao.com/assets/2015/images/list_gd.png) no-repeat;
+  background-position: 82px center;
+  background-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none; }
+
+.s_mn_search_landmark {
+  width: 312px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  position: relative;
+  float: left;
+  z-index: 2;
+  height: 38px; }
+
+.s_mn_landmark_input {
+  border: none;
+  width: 308px;
+  padding-left: 70px;
+  font: 14px/35px "microsoft yahei";
+  height: 38px;
+  color: #999;
+  background: url(http://127.0.0.1:5050/search/position_icon.png) 46px center no-repeat; }
+
+.s_mn_search_time {
+  width: 376px;
+  border-right: 1px solid #ccc;
+  float: left;
+  margin-left: 20px;
+  height: 40px; }
+
+.s_mn_checkin {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  float: left;
+  z-index: 2; }
+
+.s_mn_time_input {
+  width: 165px;
+  border: none;
+  font: 14px/35px "microsoft yahei";
+  display: block;
+  padding: 0 0 0 50px; }
+
+.w_list_dateicon {
+  background: url(http://127.0.0.1:5050/search/date_icon.png) 10px center no-repeat; }
+
+.blue {
+  color: #19b5fe; }
+
+.s_mn_timespan {
+  display: block;
+  float: left;
+  line-height: 40px;
+  margin-left: 30px; }
+
+.s_mn_checkout {
+  position: relative;
+  float: left;
+  z-index: 0; }
+
+.s_mn_search_number {
+  z-index: 1;
+  float: left;
+  width: 177px;
+  border-right: 1px solid #ccc;
+  font: 14px/40px "microsoft yahei";
+  position: relative;
+  margin-left: 20px;
+  height: 40px; }
+
+.s_mn_number_select {
+  background: url(http://127.0.0.1:5050/search/list_nummore.png) 86px center no-repeat;
+  display: block;
+  padding-right: 20px;
+  height: 38px; }
+
+.s_mn_num_ipt {
+  display: block;
+  padding: 0 0 0  50px;
+  width: 156px;
+  color: #999;
+  text-align: left;
+  cursor: pointer; }
+
+.s_mn_number_selectlist {
+  position: absolute;
+  left: -12px;
+  padding: 5px;
+  width: 178px;
+  border: 1px solid #ccc;
+  background: #fff; }
+  .s_mn_number_selectlist li {
+    width: 100%;
+    height: 30px; }
+    .s_mn_number_selectlist li a {
+      display: block;
+      width: 100%;
+      height: 30px;
+      color: #555;
+      text-align: center;
+      font: 14px/30px "宋体"; }
+    .s_mn_number_selectlist li:hover a {
+      background: #f30;
+      color: #fff; }
+
+.s_mn_search_submit2 {
+  width: 160px;
+  padding: 0 20px 0 20px;
+  float: left;
+  height: 40px; }
+
+.w_list_button {
+  width: 120px;
+  font-size: 14px;
+  height: 40px;
+  background-color: #FF6C5C;
+  border: 1px solid #eee;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.w_searchlist {
+  width: 1180px;
+  height: auto;
+  padding: 0 16px;
+  margin-top: 7px;
+  background: #fff;
+  border: 1px solid #ddd; }
+
+.s_mn_screen_list1 li {
+  overflow: visible;
+  color: #888;
+  line-height: 30px;
+  padding: 7px 0;
+  border-bottom: 1px solid #eee;
+  position: relative; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.s_mn_screenqy {
+  float: left;
+  width: 100%; }
+
+.s_mn_screen_tit {
+  float: left;
+  width: 72px;
+  text-align: right;
+  margin-left: 0;
+  color: #AAAAAA;
+  font: 14px/30px "microsoft yahei"; }
+
+.f12 {
+  font-size: 12px; }
+
+.w_listbx {
+  float: left;
+  width: 93px;
+  height: 30px;
+  line-height: 30px; }
+
+.w_listspan2 {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center; }
+  .w_listspan2 a {
+    color: #fff;
+    background-color: #FF6C5C;
+    display: block; }
+
+#list_tab li {
+  float: left;
+  width: 93px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  height: 30px;
+  border: none; }
+
+#list_tab .w_listspan {
+  cursor: pointer;
+  padding: 0 26px 0 18px;
+  background: url(http://127.0.0.1:5050/search/list_more.png) no-repeat;
+  background-position: 72px -6px;
+  height: 12px; }
+
+#list_tab .w-listabfocus {
+  cursor: pointer;
+  padding: 6px 26px 7px 18px;
+  background: #ff6c5c url(http://127.0.0.1:5050/search/list_more.png) no-repeat;
+  background-position: 72px -29px;
+  color: #fff; }
+
+#list_tab li:hover {
+  background: #ff6c5c;
+  color: #fff; }
+  #list_tab li:hover .w_listspan {
+    background-position: 72px -34px; }
+
+#w_listect div {
+  width: 1060px;
+  float: right;
+  padding: 10px 15px;
+  border: 1px solid  #ddd;
+  margin: 10px 0;
+  border-radius: 3px;
+  position: absolute;
+  left: 58px;
+  z-index: 1;
+  background: #fff;
+  top: 36px;
+  box-shadow: 0 1px 5px #ddd; }
+
+#w_listect a {
+  padding: 0 5px;
+  line-height: 24px;
+  margin-right: 15px;
+  display: inline-block;
+  font-family: "\5b8b\4f53"; }
+
+.s_mn_screenlist {
+  overflow: hidden; }
+
+.w_listspan3 {
+  width: 93px;
+  float: left;
+  margin: 0 5px 0 0;
+  display: block;
+  height: 30px;
+  overflow: hidden; }
+
+.s_mn_screenlist .w_listspan3 .s_mn_screen_aover, .s_mn_screenlist .w_listspan3 a:hover {
+  background: #FF6C5C;
+  color: #fff; }
+
+.s_mn_screenlist .w_listspan3 a {
+  font: 12px/30px "microsoft yahei";
+  padding: 0 13px;
+  display: inline-block;
+  color: #888; }
+
+.s_mn_mainbox {
+  width: 100%; }
+
+.s_mn_center {
+  margin: 0 auto;
+  padding: 10px 10px;
+  width: 1200px; }
+
+.s_mn_article {
+  width: 931px;
+  float: left; }
+
+.s_mn_detailsList_condition {
+  width: auto;
+  height: 52px;
+  border: 1px solid #ddd;
+  background: #f8f8f8; }
+
+.s_mn_ranking {
+  float: left;
+  font: 12px/50px "\5b8b\4f53";
+  color: #888;
+  text-indent: 10px; }
+  .s_mn_ranking a {
+    padding: 0 18px 0 10px; }
+    .s_mn_ranking a:hover {
+      color: #f30;
+      background: url(http://127.0.0.1:5050/search/arrowPic.png) 40px -26px no-repeat; }
+  .s_mn_ranking .descen_icon_over:hover, .s_mn_ranking .descen_icon:hover {
+    background: url(http://127.0.0.1:5050/search/arrowPic.png) 40px -38px no-repeat; }
+
+.descen_icon_over {
+  background: url(http://127.0.0.1:5050/search/arrowPic.png) 40px -38px no-repeat; }
+
+.descen_icon {
+  background: url(http://127.0.0.1:5050/search/arrowPic.png) 40px -14px no-repeat; }
+
+.ascend_icon {
+  background: url(http://127.0.0.1:5050/search/arrowPic.png) 40px 2px no-repeat; }
+
+.s_mn_search_navtag {
+  width: auto;
+  float: right;
+  font: 14px/50px "microsoft yahei";
+  color: #999;
+  padding: 0 5px;
+  height: 40px;
+  text-align: right; }
+  .s_mn_search_navtag a {
+    color: #999;
+    display: inline-block; }
+  .s_mn_search_navtag .s_red {
+    color: #f30; }
+
+.s_mn_detailslist {
+  margin-top: 10px;
+  width: 100%; }
+
+li.Lcon1 {
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-bottom: 20px;
+  width: 931px;
+  float: left; }
+
+.s_mn_housebox {
+  width: 931px;
+  height: 262px; }
+
+.s_mn_house_images {
+  float: left;
+  position: relative;
+  width: 414px;
+  height: 262px; }
+
+.like_icon2 {
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) no-repeat -7px -3px; }
+
+.s_mn_house_like {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: block;
+  width: 37px;
+  height: 37px;
+  line-height: 800px; }
+
+.list_score {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 96px;
+  height: 44px; }
+
+.score_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .68; }
+
+.tmc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 14px;
+  color: #4aaffd;
+  font-size: 14px; }
+  .tmc span {
+    color: #fff;
+    font-size: 30px; }
+
+.s_mn_house_details {
+  float: right;
+  width: 515px; }
+
+.house_details_l {
+  float: left;
+  width: 365px;
+  padding: 0 10px;
+  overflow: hidden; }
+
+.s_mn_house_tit {
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 30px; }
+
+.s_mn_house_t1 {
+  color: #19b5fe;
+  font: 18px/30px "Microsoft Yahei";
+  display: inline-block;
+  letter-spacing: 1px; }
+
+.w_list_Rtitle {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5px; }
+
+.s_mn_house_introduction {
+  width: 100%;
+  height: 160px; }
+  .s_mn_house_introduction p {
+    color: #888888;
+    font: 14px/22px "Microsoft Yahei";
+    text-align: center;
+    width: 100%; }
+    .s_mn_house_introduction p span {
+      margin: 0 5px; }
+
+.s_mn_rec_housetext {
+  width: 100%;
+  height: 50px; }
+
+.s_mn_rec_housetitle {
+  color: #777777;
+  font: 14px/30px "microsoft yahei"; }
+
+.s_mn_rec_houseintroduce {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #999999; }
+
+.s_mn_recommended_house {
+  padding-top: 6px;
+  margin-top: 0;
+  position: relative; }
+
+.s_mn_rec_house {
+  width: 209px;
+  padding: 4px 12px;
+  display: block; }
+
+.s_mn_rec_house_pic {
+  height: 131px;
+  position: relative;
+  width: 100%; }
+
+.reco_house_price {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 103px;
+  height: 28px;
+  text-align: center; }
+  .reco_house_price span {
+    font: 14px/28px "Microsoft Yahei";
+    color: #fd6554;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.s_mn_ad_erweima {
+  margin: 0;
+  border-top: 1px solid #DDDDDD; }
+
+.score_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.68; }
+
+.list_address {
+  font-size: 12px;
+  height: 18px;
+  margin-top: 3px;
+  color: #AAAAAA;
+  text-align: center; }
+
+.address_icon {
+  display: inline-block;
+  width: 13px;
+  height: 17px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -19px -68px no-repeat;
+  vertical-align: middle;
+  margin-right: 8px; }
+
+.s_mn_house_price2 {
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font: normal 20px/40px "Microsoft Yahei";
+  margin-top: 13px; }
+  .s_mn_house_price2 span {
+    color: #fb8477;
+    font: normal 32px/40px "Microsoft YaHei"; }
+
+.s_mn_house_salebox {
+  width: 100%;
+  height: 24px;
+  text-align: center; }
+  .s_mn_house_salebox em {
+    font-size: 14px;
+    color: #fb8477;
+    font-style: normal;
+    margin-right: 10px; }
+
+.list_sale_icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -18px -117px no-repeat;
+  vertical-align: middle; }
+
+.near_reserve {
+  width: 260px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #ccc;
+  height: 24px;
+  line-height: 24px; }
+
+.s_mn_house_information {
+  height: 60px;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+  .s_mn_house_information a {
+    display: inline-block;
+    font: 12px/30px "宋体";
+    color: #888; }
+  .s_mn_house_information dd {
+    display: inline-block;
+    font: 14px/30px "Microsoft Yahei";
+    height: 60px;
+    color: #bbbbbb;
+    margin: 0 7px; }
+  .s_mn_house_information .comment_num {
+    margin: 0 auto;
+    width: 50px;
+    height: 32px;
+    border: 2px solid #ddd;
+    display: block;
+    border-radius: 3px;
+    color: #aaa;
+    font: 20px/28px "Microsoft YaHei"; }
+  .s_mn_house_information p {
+    font-size: 12px;
+    padding-left: 20px;
+    color: #bbbbbb; }
+  .s_mn_house_information dl {
+    display: inline-block;
+    width: auto; }
+
+.hr {
+  width: 260px;
+  height: 1px;
+  background: #ddd;
+  position: relative;
+  top: -10px;
+  left: 50%;
+  margin-left: -130px; }
+
+.list_picnum {
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -17px -260px no-repeat; }
+
+.map_wz {
+  display: inline-block;
+  font: 14px/30px "Microsoft Yahei";
+  height: 60px;
+  color: #bbbbbb;
+  margin: 0 7px; }
+
+.list_seemap {
+  display: block;
+  width: 34px;
+  height: 34px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -8px -308px no-repeat;
+  margin: 0 auto; }
+
+.house_details_r {
+  width: 150px;
+  height: 262px;
+  float: right;
+  border-left: 1px solid #e1e1e1;
+  position: relative; }
+
+.s_mn_landlord_information {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  font: 12px/30px "宋体"; }
+
+.s_mn_landlordpic2 {
+  width: 85px;
+  height: 85px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 13px auto 0; }
+  .s_mn_landlordpic2 img {
+    height: 100%;
+    width: 100%; }
+
+.s_mn_landlordname2 {
+  text-align: center; }
+  .s_mn_landlordname2 a {
+    color: #ff6c5c;
+    font: 14px/30px "Microsoft Yahei"; }
+
+.landlordmark {
+  width: 100%; }
+  .landlordmark li {
+    height: 14px;
+    text-align: center;
+    color: #2ed182;
+    font: 14px/14px "Microsoft YaHei"; }
+    .landlordmark li a {
+      height: 14px;
+      text-align: center;
+      color: #2ed182;
+      font: 14px/14px "Microsoft YaHei"; }
+    .landlordmark li i {
+      display: inline-block;
+      vertical-align: middle; }
+
+.shenfen_icon {
+  width: 13px;
+  height: 13px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -19px -368px no-repeat;
+  margin-right: 8px; }
+
+.true_icon {
+  width: 11px;
+  height: 9px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) no-repeat -20px -470px;
+  margin-left: 8px; }
+
+.zhima_icon {
+  width: 13px;
+  height: 13px;
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -19px -417px no-repeat; }
+
+.list_zhimatip {
+  position: absolute;
+  left: 47px;
+  top: 25px;
+  width: 142px;
+  padding: 10px;
+  border: 1px solid #efd052;
+  background: #fff8da;
+  color: #333;
+  line-height: 18px;
+  font-size: 12px;
+  z-index: 2;
+  text-align: left; }
+
+.phone-ewm {
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: absolute;
+  border-top: 1px solid #cccccc;
+  background: #fff;
+  bottom: -46px;
+  z-index: 99; }
+
+.phone-ewm-info {
+  font-size: 12px;
+  color: #ff9180;
+  margin: 0 22px; }
+
+.weblt {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  overflow: hidden;
+  height: 28px; }
+  .weblt a {
+    display: inline-block;
+    width: 90px;
+    height: 28px;
+    border: 2px solid #19b5fe;
+    color: #19b5fe;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    border-radius: 14px; }
+
+.smfy_icon {
+  display: inline-block;
+  width: 63px;
+  top: 8px;
+  left: 6px;
+  height: 50px;
+  position: absolute;
+  background: url(http://127.0.0.1:5050/search/smfy_xq2.png); }
+
+.comment_icon {
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -18px -160px no-repeat; }
+
+.list_recommend {
+  background: url(http://127.0.0.1:5050/search/w_list_icon.png) -18px -210px no-repeat; }
+
+.page_city {
+  display: inline-block;
+  margin: 0 20px;
+  color: #555555;
+  font-size: 14px; }
+  .page_city a {
+    color: #19B5FE; }
+
+.s_mn_page_bar {
+  height: 30px;
+  padding: 5px 0px;
+  margin: 25px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center; }
+  .s_mn_page_bar a {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    font: 12px/25px "Microsoft YaHei"; }
+    .s_mn_page_bar a:hover {
+      background: #ff6c5c;
+      color: #fff;
+      border: 1px solid #e46355; }
+
+hr {
+  clear: both;
+  box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0; }
+
+.s_mn_sidebar {
+  width: 234px;
+  float: right;
+  margin: 0;
+  border: 1px solid #DDDDDD;
+  background-color: #fff; }
+
+.w_listbz {
+  width: 234px;
+  height: 288px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd; }
+
+.w_listbzicon {
+  width: 100%;
+  height: 167px;
+  text-align: center; }
+
+.w_listbzul {
+  margin: 0 auto;
+  padding: 8px 0;
+  width: 200px;
+  border-top: 1px solid #ddd; }
+  .w_listbzul li {
+    margin-bottom: 5px;
+    padding-left: 25px;
+    width: 173px;
+    height: 20px;
+    background: url(//assets.muniao.com/assets2/2015/images/bz_smallicon.png) center left no-repeat;
+    color: #888;
+    line-height: 20px; }
+    .w_listbzul li span {
+      font-size: 14px;
+      color: #888; }
+
+.roomList-newAdd {
+  padding: 14px 14px 1px;
+  width: 208px;
+  height: auto;
+  background: #ffffff; }
+  .roomList-newAdd li {
+    position: relative;
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 0 0 10px 52px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #999999;
+    border-bottom: 1px solid #dddddd; }
+  .roomList-newAdd img {
+    display: block;
+    position: absolute;
+    left: -8px;
+    top: -4px;
+    width: 62px;
+    height: 58px; }
+
+.s_mn_recommended_bottom {
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px dotted #ddd;
+  background: #f9f9f9; }
+
+.s_mn_center2 {
+  width: 1200px;
+  margin: 0 auto; }
+  .s_mn_center2::after {
+    display: block;
+    content: "";
+    clear: both; }
+
+.s_mn_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px; }
+
+.s_mn_t1 {
+  float: left;
+  padding-left: 15px;
+  width: 180px;
+  height: 40px;
+  background: url(http://127.0.0.1:5050/search/title_icon.png) center left no-repeat;
+  background-size: 10px;
+  font: 16px/40px "Microsoft YaHei";
+  color: #555; }
+
+.s_mn_rec_bottom {
+  width: 100%; }
+
+.s_mn_module3x {
+  float: left;
+  width: 300px; }
+
+.s_mn_place3 {
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: 300px;
+  padding: 10px; }
+
+.s_mn_housingbox3 {
+  width: 100%; }
+
+.s_mn_housing_img3 {
+  position: relative;
+  width: 100%;
+  height: 165px; }
+  .s_mn_housing_img3 a {
+    display: block;
+    width: 100%;
+    height: 165px; }
+    .s_mn_housing_img3 a img {
+      width: 100%;
+      height: 165px; }
+
+.s_mn_housing_textbox3 {
+  width: 278px;
+  border-right: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  background: #fff; }
+
+.s_mn_housing_title3 {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 278px;
+  height: 30px;
+  font: 700 14px/30px "宋体"; }
+  .s_mn_housing_title3 a {
+    color: #09f; }
+
+.s_mn_lates_houseintroduce {
+  padding: 0 10px;
+  height: 20px; }
+  .s_mn_lates_houseintroduce .s_mn_house_area {
+    font: 12px/16px "Microsoft Yahei";
+    color: #999999;
+    float: none;
+    padding: 0 6px; }
+  .s_mn_lates_houseintroduce .s_mn_house_price {
+    float: right;
+    color: #f30;
+    font: 14px/20px "microsoft yahei"; }
+
+</style>
