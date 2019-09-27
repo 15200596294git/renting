@@ -1,7 +1,7 @@
 <template>
 <div>
   <!-- 头部 -->
-  <header id="header"></header>
+  <my-header></my-header>
   <!-- 两大部分 -->
   <!-- 第一部分 -->
   <div class="s_mn_mainbox">
@@ -59,7 +59,7 @@
             </div>
             <!-- 4. -->
             <div class="s_mn_search_submit2">
-              <input type="text" value="搜&nbsp;索&nbsp;房&nbsp;间" class="w_list_button">
+              <input type="text" value="搜 索 房 间" class="w_list_button">
             </div>
           </div>
           <!-- 下 -->
@@ -4717,7 +4717,7 @@
     </div>
   </div>
   <!-- 脚部 -->
-  <footer id="footer"></footer>
+  <my-footer></my-footer>
 </div>
 </template>
 <script>

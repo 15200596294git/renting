@@ -1,7 +1,7 @@
 <template>
 <div>
   <!-- 头部 -->
-  <header id="header"></header>
+  <my-header></my-header>
   <!-- 移动端 三个部分 -->
   <!-- 第一部分 -->
   <div class="w-download-top">
@@ -70,7 +70,7 @@
     </div>
   </div>
   <!-- 脚部 -->
-  <footer id="footer"></footer>
+  <my-footer></my-footer>
 </div>
 </template>
 <script>

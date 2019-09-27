@@ -1,7 +1,7 @@
 <template>
 <div>
   <!-- 头部 -->
-  <header id="header"></header>
+  <my-header></my-header>
   <!-- 租房故事，整体两个部分，轮播图和故事列表 -->
   <!-- 第一部分，轮播图部分 -->
   <div class="w_storybanner">
@@ -414,7 +414,7 @@
     </div>
   </div>
   <!-- 脚部 -->
-  <footer id="footer"></footer>
+  <my-footer></my-footer>
 </div>
 </template>
 <script>

@@ -1,11 +1,46 @@
 <template>
-<div>
-  <header id="header"></header>
+<div style="overflow:hidden">
+  <my-header></my-header>
   <!-- 主页部分7个部分 -->
   <div id="body">
     <!-- 1.轮播图 -->
-    <div style="text-align: center">
-      <img src="http://127.0.0.1:5050/features/banner.jpg" height="550px"  alt="">
+    <div style="text-align: center;position:relative;">
+      <a href="javascript:void(0);" class="banner"></a>
+      <!-- 1.1 -->
+    <div class="s_mn_search_index">
+      <ul class="s_mn_search_list">
+        <li class="city_w">
+          <div class="s_mn_search_ipt">
+            <div class="s_mn_ipt_index">
+              <input type="text" placeholder="请选择目的地" name="" class="s_mn_city_ipt s_orange s_f20 s_yh w_index_position city_ipt_w">
+            </div>
+          </div>
+        </li>
+        <li class="s_mn_search_list_w date_start">
+          <div class="in-live">
+            <i class="in-live-icon"></i>
+            <span class="in-live-text">入住时间</span>
+          </div>
+        </li>
+        <li class="s_mn_search_list_w">
+          <div class="line"></div>
+        </li>
+        <li class="s_mn_search_list_w date_end">
+          <div class="leave-time">
+            离开时间
+          </div>
+        </li>
+        <li class="s_mn_search_list_w w_rz_person">
+          <div class="in-live-person">
+            <i class="in-live-person-icon"></i>
+            <span class="in-live-person-text">入住人数</span>
+          </div>
+        </li>
+        <li>
+          <input type="button" value="开始预订" class="start-reserve">
+        </li>
+      </ul>
+    </div>
     </div>
     <!-- 2.意外保险 -->
     <div class="good">
@@ -33,7 +68,7 @@
         <div class="hotcity-main">
           <!-- 3.1图片 -->
           <div class="hotcity-blo">
-            <a href="javascript:void(0)" class="hot-link">
+            <router-link to="/Search" class="hot-link">
               <img src="http://127.0.0.1:5050/index/beijing.webp" alt="">
               <div class="text-box">
                 <div>
@@ -41,7 +76,7 @@
                   <span class="text-f2">京戏胡同豆汁酸</span>
                 </div>
               </div>
-            </a>
+            </router-link>
           </div>
           <div class="hotcity-blo">
             <a href="javascript:void(0)" class="hot-link">
@@ -369,32 +404,32 @@
   <!-- 8.侧边栏 -->
   <div class="sidebar">
     <ul>
-      <li class="silder_hide">
-        <a href="javascript:void(0);" onclick="qimoChatClick()" target="_self">
+      <li class="silder_hide" @mouseenter="showI(0)" @mouseleave="hide(0)">
+        <a href="javascript:void(0);" target="_self">
             <img style="margin-top: 5px;" src="http://127.0.0.1:5050/index/mumu.png" title="咨询客服">
         </a>
-        <div class="link-tips">
+        <div class="link-tips" v-show="sideShow[0]">
             <p>在线客服</p>
             <!--<p>客服电话</p>
             <span>400-056-0055</span>-->
         </div>
     </li>
-    <li class="side_order">
+    <li class="side_order" @mouseenter="showI(1)" @mouseleave="hide(1)">
         <a class="side_click" href="javascript:void(0)" target="_blank"></a>
-        <div class="tenant_tip">
+        <div class="tenant_tip" v-show="sideShow[1]" @mouseenter="showI(1)">
             <h3>我的订单</h3>
             <p>查看您的近期订单</p>
             <a href="javascript:void(0);" target="_blank">点击查看</a>
         </div>
     </li>
-    <li class="tenant_f">
-        <div class="tenant_tip qq-area">
+    <li class="tenant_f" @mouseenter="showI(2)" @mouseleave="hide(2)">
+        <div class="tenant_tip qq-area" v-show="sideShow[2]">
             <img src="http://127.0.0.1:5050/index/index_linkma.png">
         </div>
     </li>
-    <li class="opinion_f">
+    <li class="opinion_f" @mouseenter="showI(3)" @mouseleave="hide(3)">
         <a class="side_click" href="javascript:void(0)" target="_blank"></a>
-        <div class="tenant_tip">
+        <div class="tenant_tip" v-show="sideShow[3]">
             <h3>问题反馈</h3>
             <p>请将您的问题告诉我们，<br>我们将更好的为您服务。</p>
             <a href="javascript:void(0)" target="_blank">点击反馈</a>
@@ -402,12 +437,110 @@
     </li>
     </ul>
   </div>
-  <footer id="footer"></footer>
+  <!-- 9.下面和左边广告栏 -->
+  <div class="downapp-layer" v-show="isShow">
+    <!-- 左边 -->
+    <div class="left_down" :style="posi_left" @click="close_left">
+      <img src="http://127.0.0.1:5050/index/left_down_bot.png" alt="" style="left:0">
+    </div>
+    <!-- 下面 -->
+    <div class="down_app" :style="posi_bottom">
+      <div class="down_app_bg"></div>
+      <div class="down_app_c">
+        <div class="down_app_left">
+          <img src="http://127.0.0.1:5050/index/newdownappone.png" alt="">
+        </div>
+        <div class="down_app_right">
+          <h4>扫描二维码</h4>
+          <div class="appewm">
+            <img src="http://127.0.0.1:5050/index/wechatone.jpg" alt="">
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="close_down" @click="close_bottom">
+          <img src="http://127.0.0.1:5050/index/close_down.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <my-footer></my-footer>
 </div>
 </template>
 <script>
 export default {
-  
+  data(){
+    return{
+      // 1.侧边栏悬浮显示
+      sideShow:[false,false,false,false],
+      i:0,
+      timer:null,
+      px:0,
+      // 控制广告的显/隐藏
+      isShow:false,
+      // 保存左边广告的位置
+      posi_left:{
+        left:"-120px",
+      },
+      posi_bottom:{
+        left:"0"
+      }
+    }
+  },
+  methods:{
+    // 侧标栏的显示
+    showI(i){
+      this.timer!=null&&(clearTimeout(this.timer)&&(this.timer = null));
+      for(var c=0;c<this.sideShow.length;c++){
+        if(c==i){
+          this.$set(this.sideShow,c,true)
+        }else{
+          this.$set(this.sideShow,c,false);
+        } 
+      }
+    },
+    // 侧边栏的隐藏
+    hide(i){
+      var timer;
+      // 其它的马上隐藏 
+      this.timer = setTimeout(()=>{
+        this.$set(this.sideShow,i,false);
+      },500)
+      
+      console.log(this.sideShow);
+    },
+    handleScroll(){
+      var scrollTop = window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
+      var scroll = scrollTop - this.px;
+      this.px = scrollTop;
+      console.log(scrollTop)
+      if(scrollTop>=500){
+        this.isShow = true;
+        console.log("显示");
+      }else{
+        this.isShow = false;
+        console.log("隐藏")
+      }
+    },
+    // 关闭下面广告栏
+    close_bottom(){
+      
+      this.posi_bottom = {left:"-1423px"};
+      setTimeout(()=>{
+        this.posi_left = {left:"0"};
+      },300)
+      
+    },
+    close_left(){
+      
+      this.posi_left = {left:"-120px"};
+      setTimeout(()=>{
+        this.posi_bottom = {left:"0"};  
+      },300)
+      
+    }
+  },
+  mounted(){
+    window.addEventListener("scroll",this.handleScroll,true);
+  }
 }
 </script>
 <style scoped>
@@ -1004,5 +1137,207 @@ body {
 
 .opinion_f {
   background: url(http://127.0.0.1:5050/index/side.png) no-repeat center -76px; }
+/* 左边广告 */
+.left_down{
+  position: fixed;
+  bottom:240px;
+  z-index: 100;
+  width: 120px;
+  height: 74px;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+/* 下面广告栏 */
+.down_app{
+  position: fixed;
+  bottom:0;
+  z-index: 999;
+  width:100%;
+  height: 140px;
+  background:transparent;
+  opacity: 1;
+  transition: all 300ms linear;
+}
+.down_app_bg{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  background: #000;
+  opacity: .7;  
+}
+/* 图片 */
+.down_app_c{
+  width:1018px;
+  margin: 0 auto;
+  height:140px;
+  top:0;
+  position: relative;
+}
+.down_app_left{
+  position: absolute;
+  top:-34px;
+  left:96px;
+}
+.down_app_right{
+  position: absolute;
+  right:132px;
+  top:0;
+  width:204px;
+  height:140px;
+  background:#11172e;
+  z-index:1;
+}
+.down_app_right h4{
+  height: 34px;
+    padding: 6px 0 0;
+    margin: 0;
+    line-height: 34px;
+    text-align: center;
+    font-size: 16px;
+    color: #fefefe;
+}
+.appewm{
+  width:92px;
+  height:92px;
+  margin: 5px auto 0;
+}
+.close_down{
+  position:absolute;
+  top:8px;
+  right:90px;
+}
+/* banner大图片 */
+.banner{
+  width:100%;
+  height:550px;
+  display: block;
+  background:url(http://127.0.0.1:5050/index/banner1.jpg) 50% 50% no-repeat;
+}
+/* 你想去的城市 */
+.s_mn_search_list::after{
+  display: block;
+  content:"";
+  clear:both;
 
+}
+.s_mn_search_list li{
+  float: left;
+}
+.city_w{
+  width:308px;
+  border-right: 1px solid #ddd;
+}
+.s_mn_search_ipt{
+  width: 108px;
+    height: 56px;
+    background: #fff;
+    position: relative;
+}
+
+.s_mn_ipt_index{
+  width: 100%;
+    height: 56px;
+    border: 0;
+}
+.s_mn_city_ipt {
+    height: 56px;
+    line-height: 54px;
+    text-align: left;
+    border: 0 none;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+.s_mn_city_ipt::placeholder{
+  color:#F86D56;
+}
+.w_index_position {
+    background: #FFF url(//assets.muniao.com/assets/2015/images/index_selectbg.png) 10px 0 no-repeat;
+    padding-left: 40px;
+}
+.city_ipt_w {
+    width: 307px;
+}
+.in-live{
+  display: flex;
+  width:152px;
+  height:56px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+/* 小图片 */
+.in-live-icon{
+  display: inline-block;
+  width:56px;
+  height:56px;
+  background: url(http://127.0.0.1:5050/index/index_selectbg.png) 10px -44px no-repeat;
+}
+/* 文字样式 */
+.in-live-text{
+  display: inline-block;
+  width:112px;
+  height: 56px;
+  color:#F86D56;
+  font-size:16px;
+  text-align: center;
+  line-height: 56px;
+}
+/* 设置横线 */
+.line{
+  width:20px;
+  height:2px;
+  background:#ccc;
+  transform: translateY(28px);
+  margin: 0 18px;
+}
+/* 离开时间 */
+.leave-time{
+  width: 111px;
+  line-height: 56px;
+  text-align: center;
+  color:#F86D56;
+}
+.in-live-person{
+  display: flex;
+  width:133px;
+  height:56px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+/* 小图片 */
+.in-live-person-icon{
+  display: inline-block;
+  width:35px;
+  height:56px;
+  background: url(http://127.0.0.1:5050/index/index_selectbg.png) 10px -99px no-repeat;
+}
+.in-live-person-text{
+  color:#F86D56;
+  padding-right: 10px;
+}
+.date_end{
+  border-right: 1px solid #ddd;
+}
+.start-reserve{
+  color:#fff;
+  width:160px;
+  height:56px;
+  background: #f86d56;
+  border: 0;
+  border-radius: 3px;
+}
+/* 位置 */
+.s_mn_search_index{
+  position: absolute;
+  top:88%;
+  left:222px;
+}
+.s_mn_search_list_w{
+  height: 56px;
+  background: #fff;
+}
 </style>

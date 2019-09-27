@@ -1,5 +1,6 @@
 <template>
 <div>
+  <my-header></my-header>
   <div id="features-banner">
     <div class="sub-title">
       <h1 class="f-28">主题特色房</h1>
@@ -147,7 +148,7 @@
     </div>
   </div>
   <!-- 脚部 -->
-  <footer id="footer"></footer>
+  <my-footer></my-footer>
 </div>
 </template>
 <script>
