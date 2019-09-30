@@ -6,29 +6,29 @@
   <!-- 第一部分，轮播图部分 -->
   <div class="w_storybanner">
     <ul id="ul_imgs">
-      <li style="display: block;">
+      <li v-show="item" v-for="(item,i) of isShow" :key="i">
         <a src="javascript:;"></a>
       </li>
-      <li style="display: none;">
+      <!-- <li >
         <a src="javascript:;"></a>
       </li>
-      <li style="display: none;">
+      <li >
         <a src="javascript:;"></a>
       </li>
-      <li style="display: none;">
+      <li >
         <a src="javascript:;"></a>
       </li>
-      <li style="display: none;">
+      <li >
         <a src="javascript:;"></a>
-      </li>
+      </li> -->
     </ul>
     <!-- 按钮部分 -->
     <div class="tabbtn">
-      <a href="javascript:void(0);" class="active" data-target="0"></a>
-      <a href="javascript:void(0);" data-target="1"></a>
+      <a href="javascript:void(0);" v-for="(item,ind) of isShow" :key="ind" :class="i==ind?'active':''" @click="move(ind)"></a>
+      <!-- <a href="javascript:void(0);" data-target="1"></a>
       <a href="javascript:void(0);" data-target="2"></a>
       <a href="javascript:void(0);" data-target="3"></a>
-      <a href="javascript:void(0);" data-target="4"></a>
+      <a href="javascript:void(0);" data-target="4"></a> -->
     </div>
   </div>
   <!-- 第二部分，故事列表部分 -->
@@ -419,7 +419,47 @@
 </template>
 <script>
 export default {
-  
+  data(){
+    return{
+      isShow:[true,false,false,false,false],
+      i:0,
+      timer:null
+    }
+  },
+  methods:{
+    move(i){
+      // 点击时，清除定时器
+      this.clear();
+      // 判断i的值是否超出范围
+      i>this.isShow.length-1&&(i=0);
+      this.i = i;
+      // 1.将当前i变成传递的i
+      for(var ind=0;ind<this.isShow.length;ind++){
+        // console.log()
+        if(ind==i){
+          this.$set(this.isShow,ind,true);
+        }else{
+          this.$set(this.isShow,ind,false);
+        }
+      }
+      // 程序执行完后，启用定时器
+      this.autoPlay();
+    },
+    autoPlay(){
+      // 开始定时器
+      this.timer = setInterval(()=>{
+        this.move(this.i+1);
+      },3000)
+    },
+    clear(){
+      // 清除定时器
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  },
+  mounted(){
+    this.autoPlay();
+  }
 }
 </script>
 <style scoped>

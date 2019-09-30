@@ -10,6 +10,7 @@ import Story from './views/Story'
 import Mobile from './views/Mobile'
 // 引入二级页面search
 import Search from './components/Search'
+
 Vue.use(Router)
 
 export default new Router({
@@ -23,6 +24,6 @@ export default new Router({
   {path:'/Features',name:'Features',component: Features},
   {path:'/Story',name:'Story',component: Story},
   {path:'/Mobile',name:'Mobile',component: Mobile},
-  {path:"/Search",name:"Search",component:Search}
+  {path:"/Search",name:"Search",component:Search},
   ]
 })

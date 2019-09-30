@@ -1263,6 +1263,7 @@ body {
 .in-live{
   display: flex;
   width:152px;
+  
   height:56px;
   justify-content: space-between;
   align-items: center;
@@ -1329,6 +1330,7 @@ body {
   background: #f86d56;
   border: 0;
   border-radius: 3px;
+  cursor: pointer;
 }
 /* 位置 */
 .s_mn_search_index{
