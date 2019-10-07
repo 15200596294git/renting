@@ -29,11 +29,31 @@
       </ul>
     </div>
     <!-- 右边登录/注册 -->
-    <div class="right">
+    <div class="right" v-if="1">
       <button class="right-btn" @click="login">免费发布房源</button>
       <span class="right-txt" @click="login">登录&nbsp;/&nbsp;注册</span>
       <!-- <span>/</span>
       <span class="right-txt">注册</span> -->
+    </div>
+    <!-- 登录成功后样式 -->
+    <div v-else class="s_mn_userbox">
+      <span>Hi,欢迎回来！</span>
+      <a href="javascript:void(0);" class="s_mu_username" @mouseenter="toggle_username(1)" @mouseleave="toggle_username(0)">Capon-MN146</a>
+      <!-- 选项 -->
+      <div class="s_mu_usermenubox" v-show="option_user" @mouseenter="toggle_username(1)" @mouseleave="toggle_username(0)">
+        <ul class="s_mu_usermenu">
+          <li>
+            <a href="javascript:void(0);">我的订单</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">木鸟APP</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">退出</a>
+          </li>
+        </ul>
+      </div>
+      <a href="javascript:void(0);" class="s_mn_navbutt">我要成为房东</a>
     </div>
   </div>
    <!-- 0.1添加灰色背景 -->
@@ -85,11 +105,13 @@
       <ul class="newa_login_input">
         <li>
             <i class="newa_email_tel_icon"></i>
-            <input type="text" id="Login_Email_Tel_M" placeholder="手机号">
+            <input type="text" id="Login_Email_Tel_M" placeholder="手机号" @focus="switch_test_pho(1)" @blur="switch_test_pho(0)" v-model="phone">
+            <small class="marked_words" v-text="please_pho" :style="please_pho_sty"></small>
         </li>
         <li>
             <i class="newa_l_password_icon"></i>
-            <input type="password" id="Login_Pwd" placeholder="密码">
+            <input type="password" id="Login_Pwd" placeholder="密码"  v-model="pwd" @focus="switch_test_pwd(1)" @blur="switch_test_pwd(0)">
+            <small class="marked_words" v-text="please_pwd" :style="please_pwd_sty" ></small>
         </li>
         <li>
             <i class="newa_piccode_icon"></i>
@@ -102,7 +124,7 @@
         <input id="newa_auto_l" type="checkbox">
         <label for="newa_auto_l">下次自动登录</label>
     </div>
-    <a class="newa_login_btn newa_ordinary" href="javascript:void(0);"></a>
+    <a @click="login_user" class="newa_login_btn newa_ordinary" href="javascript:void(0);"></a>
 
     <div class="newa_coop">
         <a class="newa_sina" href="https://api.weibo.com/oauth2/authorize?state=http%3A%2F%2Fwww.muniao.com%2Fuser%2Fcenter&amp;client_id=3437054643&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fwww.muniao.com%2FHome%2FCallBack%3Fchannel%3Dweibo"></a>
@@ -127,8 +149,23 @@ export default {
         "d-none":true
       },
       // 3.登录方式
-      logTog:true,
-      
+      logTog:false,
+      // 4.保存提示语
+      please_pho:"",
+      please_pwd:"",
+      // 5.保存样式
+      please_pho_sty:{
+        color:"red"
+      },
+      please_pwd_sty:{
+        color:"red"
+      },
+      // 6.保存用户输入的手机号
+      phone:"",
+      // 7.保存用户输入的密码
+      pwd:"",
+      // 8.保存选项的显示隐藏
+      option_user:false,
     }
   },
   methods:{
@@ -150,6 +187,75 @@ export default {
     // 登录方式的切换
     logMethod(bool){
       this.logTog = bool;
+    },
+    // 获取焦点
+    switch_test_pho(num){
+      if(num){
+        // 获取焦点，显示提示文本
+        this.please_pho = "请输入手机号";
+        this.please_pho_sty = {color:"red"};
+      }else{
+        // 失去焦点，验证
+        // 创建正则表达式
+        var reg = /^1[3-9]\d{9}$/;
+        // 如果验证通过，提示绿色文字，格式正确
+        if(reg.test(this.phone)){
+          this.please_pho = "手机号格式正确";
+          this.please_pho_sty.color = "green";
+        }else{
+          // 验证未通过
+          // 判断是否为空
+          if(this.phone.trim()!=""){
+            // 提示格式不正确
+            this.please_pho = "手机号格式不正确";
+            this.please_pho_sty = {color:"red"};
+          }
+        }
+      }
+    },
+    // 密码验证
+    switch_test_pwd(num){
+      if(num){
+        // 获取焦点，显示提示文本
+        this.please_pwd = "请输入密码";
+        this.please_pwd_sty = {color:"red"};
+      }else{
+        // 失去焦点，验证密码格式
+        // 创建正则表达式(6~12位数字或者密码)
+        var reg = /^[0-9a-zA-Z]{6,12}$/;
+        // 如果验证通过，格式正确，颜色为绿色
+        if(reg.test(this.pwd)){
+          this.please_pwd = "密码格式正确";
+          this.please_pwd_sty = {color:"green"};
+        }else{
+          // 否则，验证为通过
+          // 当用户输入了内容，提示格式不正确
+          if(this.pwd.trim()!=""){
+            this.please_pwd = "密码格式不正确";
+            this.please_pwd_sty = {color:"red"};
+          }
+        }
+      }
+    },
+    // 选项的显示隐藏
+    toggle_username(bool){
+      if(bool){
+        // 当鼠标移入时，显示
+        this.option_user = true;
+      }else{
+        // 当鼠标移出，隐藏
+        this.option_user = false;
+      }
+    },
+    // 登录
+    login_user(){
+      // 获取用户输入的手机号
+      var phone = this.phone;
+      var pwd = this.pwd;
+      // 获取用户输入的密码
+      this.axios.get("login",{params:{phone,pwd}}).then(res=>{
+        
+      })
     }
   },
   mounted(){
@@ -193,7 +299,7 @@ body {
 
 /* 中间部分样式 */
 .middle {
-  margin: 0 33px 0 0; }
+  margin: 0 -50px 0 0; }
 
 /* 设置li浮动 */
 .middle-ul > li {
@@ -242,7 +348,9 @@ body {
 
 } */
 .right {
-  margin: 0 40px 0 0; }
+  margin: 0 40px 0 0; 
+  width:380px;
+  }
 
 /* 发布房源按钮样式 */
 .right-btn {
@@ -331,8 +439,17 @@ body {
     height: 44px;
     font-size: 14px;
     border: 1px solid #eeeeee;
-    padding-left: 35px; }
-
+    padding-left: 35px;
+    padding-right :118px;
+     }
+/* 提示语 */
+.marked_words{
+  position: absolute;
+  width:118px;
+  top:14px;
+  left:157px;
+  z-index:0;
+}
 .newa_kj_icon {
   background: url(http://127.0.0.1:5050/index/login_icon.png) no-repeat 0 -74px;
   width: 14px;
@@ -467,5 +584,63 @@ body {
   to{
     transform: translateY(0px)
   }
+}
+/* 登录成功后的样式 */
+.s_mn_userbox{
+  position: relative;
+}
+.s_mn_userbox span{
+  margin-right: 2px;
+  line-height: 59px;
+  color:#777;
+}
+.s_mu_username{
+  line-height: 59px;
+  color: #f30;
+  padding-right: 20px;
+  font: 15px/45px Microsoft YaHei;
+  margin-right: 15px;
+  background: url(http://127.0.0.1:5050/header/bgli.png) right center no-repeat;
+}
+.s_mn_navbutt{
+  border: 2px solid #FF6C5C;
+  color:#f30;
+  border-radius: 14px;
+  padding: 5px 10px; 
+}
+.s_mn_navbutt:hover{
+  color:#fff;
+  background: #FF6C5C;
+}
+.s_mu_usermenubox{
+  
+  position: absolute;
+  left:145px;
+  top:36px;
+  color:#fff;
+  z-index: 1;
+}
+/* 设置ul的背景 */
+.s_mu_usermenu{
+  opacity: 0.8;
+  background-color: rgb(191, 82, 13);
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 3px;
+  width: 80px;  
+}
+.s_mu_usermenu li{
+  
+  width: 100%;
+  height: 30px;
+}
+.s_mu_usermenu li:hover{
+  background: #f30;
+}
+.s_mu_usermenu li a{
+  font-size: 12px;
+  font-family: 微软雅黑;
+  color:#fff;
+  line-height: 30px;
 }
 </style>
