@@ -10,7 +10,8 @@ import Story from './views/Story'
 import Mobile from './views/Mobile'
 // 引入二级页面search
 import Search from './components/Search'
-
+// 订单管理
+import Order from './views/Order'
 Vue.use(Router)
 
 export default new Router({
@@ -25,5 +26,7 @@ export default new Router({
   {path:'/Story',name:'Story',component: Story},
   {path:'/Mobile',name:'Mobile',component: Mobile},
   {path:"/Search",name:"Search",component:Search},
+  // 测试
+  {path:"/Order",name:"Order",component:Order}
   ]
 })
