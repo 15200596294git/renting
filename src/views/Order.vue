@@ -63,7 +63,6 @@
           </ul>
         </div>
       </div>
-
       <!-- 右边部分 -->
       <!-- <order-adm></order-adm> -->
       <!-- <my-coll></my-coll> -->
@@ -75,7 +74,11 @@
       <!-- 6.我的租币 -->
       <!-- <my-rent></my-rent> -->
       <!-- 7.修改密码 -->
-      <chg-pwd></chg-pwd>
+      <!-- <chg-pwd></chg-pwd> -->
+      <!-- 8.收款方式 -->
+      <!-- <pay-way></pay-way> -->
+      <!-- 9.消息提醒 -->
+      <msg-alerts></msg-alerts>
     </div>
    
     <!-- 脚部 -->
@@ -126,7 +129,9 @@ mouted() {
     "my-member":MyMember,
     "my-coupon":MyCoupon,
     "my-rent":MyRent,
-    "chg-pwd":ChgPwd
+    "chg-pwd":ChgPwd,
+    "pay-way":PayWay,
+    "msg-alerts":MsgAlerts
   }
 }
 </script>
