@@ -29,7 +29,7 @@
       </ul>
     </div>
     <!-- 右边登录/注册 -->
-    <div class="right" v-if="1">
+    <div class="right" v-if="!isLogin">
       <button class="right-btn" @click="login">免费发布房源</button>
       <span class="right-txt" @click="login">登录&nbsp;/&nbsp;注册</span>
       <!-- <span>/</span>
@@ -143,7 +143,7 @@ export default {
         bgAllDark:true,
         "d-none":true
       },
-      // 2.保存登录宽的显示与隐藏
+      // 2.保存登录框的显示与隐藏
       loginInp:{
         newa_login_main:true,
         "d-none":true
@@ -166,6 +166,8 @@ export default {
       pwd:"",
       // 8.保存选项的显示隐藏
       option_user:false,
+      // 9.是否登录
+      isLogin:false
     }
   },
   methods:{
@@ -254,7 +256,15 @@ export default {
       var pwd = this.pwd;
       // 获取用户输入的密码
       this.axios.get("login",{params:{phone,pwd}}).then(res=>{
-        
+        // 判断
+        var res = res.data;
+        if(res.code>0){
+          // 登录成功，隐藏登录框
+          this.logToggle(true);
+          // 显示个人信息
+          this.isLogin = true;
+        }
+        console.log(res);
       })
     }
   },

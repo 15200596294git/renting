@@ -14,8 +14,8 @@
           </div>
           <span>Capon-MN146</span>
           <div class="userheadtxt">
-            <a href="javascript:void(0);">订单管理</a>
-            <a href="javascript:void(0);">个人信息</a>
+            <a href="javascript:void(0);" @click="toggle($event)" data-i="0">订单管理</a>
+            <a href="javascript:void(0);" @click="toggle($event)" data-i="3">个人信息</a>
           </div>
         </div>
         <div class="usidebar">
@@ -23,47 +23,48 @@
           <ul>
             <li class="usidebarlibg1">
               <img src="http://127.0.0.1:5050/order_admin/folders.gif" alt="" style="width:18px;height:18px;">
-              <a href="javascript:void(0);">订单管理</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="0">订单管理</a>
               </li>
             <li>
               <img src="http://127.0.0.1:5050/order_admin/star.gif" alt="">
-              <a href="javascript:void(0);">我的收藏</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="1">我的收藏</a>
               </li>
           </ul>
           <h4 style="color:#444">用户信息</h4>
           <ul>
             <li>
               <img src="http://127.0.0.1:5050/order_admin/icon_memeber.png" alt="">
-              <a href="javascript:void(0);">我的会员</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="2">我的会员</a>
               </li>
             <li>
               <img src="http://127.0.0.1:5050/order_admin/user_edit.gif" alt="">
-              <a href="javascript:void(0);">个人信息</a>
+              <a href="javascript:void(0);"  @click="toggle($event)" data-i="3">个人信息</a>
               </li>
               <li>
               <img src="http://127.0.0.1:5050/order_admin/database_user.gif" alt="">
-              <a href="javascript:void(0);">我的优惠券</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="4">我的优惠券</a>
               </li>
             <li>
               <img src="http://127.0.0.1:5050/order_admin/key.gif" alt="">
-              <a href="javascript:void(0);">我的租币  </a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="5">我的租币  </a>
               </li>
               <li>
               <img src="http://127.0.0.1:5050/order_admin/folders.gif" alt="">
-              <a href="javascript:void(0);">密码修改</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="6">密码修改</a>
               </li>
             <li>
               <img src="http://127.0.0.1:5050/order_admin/user_down.gif" alt="">
-              <a href="javascript:void(0);">收款方式</a>
+              <a href="javascript:void(0);" @click="toggle($event)" data-i="7">收款方式</a>
               </li>
               <li>
               <img src="http://127.0.0.1:5050/order_admin/comment_reply.gif" alt="">
-              <a href="javascript:void(0);">消息提醒</a>
+              <a href="javascript:void(0);"  @click="toggle($event)" data-i="8">消息提醒</a>
               </li>
           </ul>
         </div>
       </div>
       <!-- 右边部分 -->
+      <my-component :is="componentsList[componentsId]"></my-component>
       <!-- <order-adm></order-adm> -->
       <!-- <my-coll></my-coll> -->
       <!-- 3.我的会员 -->
@@ -78,7 +79,7 @@
       <!-- 8.收款方式 -->
       <!-- <pay-way></pay-way> -->
       <!-- 9.消息提醒 -->
-      <msg-alerts></msg-alerts>
+      <!-- <msg-alerts></msg-alerts> -->
     </div>
    
     <!-- 脚部 -->
@@ -105,10 +106,17 @@ import PayWay from '../components/Order/PayWay'
 import MsgAlerts from '../components/Order/MsgAlerts'
 export default {
   data() {
-   return{}
+   return{
+     componentsId:0,
+     componentsList:[ "order-adm","my-coll","my-member","my-coupon","my-rent","chg-pwd","pay-way","msg-alerts"]
+   }
   },
 methods: {
-  
+    toggle(e){
+      var i = e.target.dataset.i;
+      // console.log(i);
+      this.componentsId = i;
+    }
   },
 watch: {
   
